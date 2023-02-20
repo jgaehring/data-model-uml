@@ -1,0 +1,207 @@
+# DFC ontology currently supported concepts
+
+
+- `Address`
+  - [x] street
+  - [x] postcalcode
+  - [x] city
+  - [x] country
+  - [ ] addressOf
+- `Agent`
+  - [x] hasAddress
+  - [ ] hasPhoneNumber
+  - [ ] hasSocialMedia
+  - [ ] orders
+  - [ ] requests
+  - [ ] owns
+- `AsPlannedConsumptionFlow`
+  - [ ] quantity
+  - [ ] consumes
+  - [ ] incomeOf
+- `AsPlannedLocalConsumptionFlow`
+  - [ ] quantity
+  - [ ] consumes
+  - [ ] incomeOf
+- `AsPlannedLocalProductionFlow`
+  - [ ] quantity
+  - [ ] produces
+  - [ ] outcomeOf
+- `AsPlannedLocalTransformation`
+  - [ ] cost
+  - [ ] startDate
+  - [ ] endDate
+  - [ ] hasIncome
+  - [ ] hasOutcome
+  - [ ] transformedBy
+- `AsPlannedProductionFlow`
+  - [ ] quantity
+  - [ ] produces
+  - [ ] outcomeOf
+- `AsPlannedTransformation`
+  - [ ] hasIncome
+  - [ ] hasOutcome
+- `AsRealizedConsumptionFlow`
+  - [ ] quantity
+  - [ ] consumes
+  - [ ] incomeOf
+- `AsRealizedProductionFlow`
+  - [ ] quantity
+  - [ ] produces
+  - [ ] outcomeOf
+- `AsRealizedTransformation`
+  - [ ] startDate
+  - [ ] endDate
+  - [ ] hasIncome
+  - [ ] hasOutcome
+- `Brand`
+  - [ ] description
+- `Catalog`
+  - [ ] lists
+  - [ ] maintains
+- `CatalogItem`
+  - [x] references
+  - [x] sku
+  - [x] stockLimitation
+  - [x] offeredThrough
+  - [ ] listedIn
+  - [ ] managedBy
+- `Coordination`
+  - [ ] coordinates
+  - [ ] hasObject
+  - [ ] marginPercent
+- `CustomerCategory`
+  - [x] description
+  - [ ] definedBy
+- `DefinedProduct`
+  - [x] description
+  - [x] hasType
+  - [x] hasQuantity
+  - [x] alcohol percentage
+  - [x] lifetime
+  - [x] hasClaim
+  - [x] usage or storage conditions
+  - [x] hasAllergenCharacteristic
+  - [x] hasNutrientCharacteristic
+  - [x] hasPhysicalCharacteristic
+  - [x] hasGeographicalOrigin
+  - [x] catalog items
+  - [x] certifications
+  - [x] hasNatureOrigin
+  - [x] hasPartOrigin
+  - [ ] hasBrand
+  - [ ] hasProcess
+  - [ ] image
+  - [ ] referencedBy
+  - [ ] consumedBy
+  - [ ] referenceOf
+- `DeliveryOption`
+  - [ ] quantity
+  - [ ] uses
+  - [ ] startDate
+  - [ ] endDate
+  - [ ] fee
+  - [ ] selectedBy
+- `Enterprise`
+  - [x] VATnumber
+  - [x] defines
+  - [x] supplies
+  - [x] manages
+  - [ ] proposes
+  - [ ] transforms
+  - [ ] maintains
+  - [ ] affiliates
+  - [ ] coordinatedBy
+- `FunctionalProduct`
+  - [ ] requestedBy
+  - [ ] satifiedBy
+- `LocalizedProduct`
+  - [ ] cost
+  - [ ] consumedBy
+  - [ ] producedBy
+  - [ ] hasReference
+  - [ ] representedBy
+  - [ ] constitutedBy
+- `Offer`
+  - [ ] discount
+  - [x] offeredTo
+  - [ ] concernedBy
+  - [x] stockLimitation
+  - [x] hasPrice (offeredFor)
+  - [ ] listedIn
+  - [ ] offers
+- `Order`
+  - [ ] orderNumber
+  - [ ] discount
+  - [ ] date
+  - [ ] belongsTo
+  - [ ] hasPart
+  - [ ] orderedBy
+  - [ ] selects
+  - [ ] uses
+- `OrderLine`
+  - [ ] quantity
+  - [ ] discount
+  - [ ] hasPrice
+  - [ ] concerns
+  - [ ] partOf
+- `PaymentMethod`
+  - [ ] price
+  - [ ] usedBy
+- `Person`
+  - [x] familyName
+  - [x] firstName
+  - [x] affiliatedBy
+- `Place`
+  - [ ] hosts
+- `PhysicalPlace`
+  - [ ] hasAddress
+- `PhysicalProduct`
+  - [ ] represents
+  - [ ] constitutedBy
+  - [ ] tracedBy
+  - [ ] concernedBy
+  - [ ] ownedBy
+  - [ ] producedBy
+  - [ ] consumedBy
+- `PickupOption`
+  - [ ] refersTo
+- `ProductBatch`
+  - [ ] identifies
+  - [ ] traces
+- `RealStock`
+  - [ ] quantity
+  - [ ] date
+  - [ ] isStoredIn
+  - [ ] identifiedBy
+  - [ ] constitutes
+- `SaleSession`
+  - [ ] beginDate
+  - [ ] endDate
+  - [ ] quantity
+  - [ ] lists
+- `ShippingOption`
+  - [ ] quantity
+  - [ ] optionOf
+  - [ ] selectedBy
+  - [ ] fee
+  - [ ] startDate
+  - [ ] endDate
+- `SuppliedProduct`
+  - [x] totalTheoreticalStock
+  - [ ] referenceOf
+- `TechnicalProduct`
+  - [ ] satisfies
+  - [ ] industrializedBy
+- `TheoreticalStock`
+  - [ ] quantity
+  - [ ] date
+  - [ ] localizedBy
+  - [ ] constitutes
+- `Transaction`
+  - [ ] price
+  - [ ] quantity
+  - [ ] from
+  - [ ] to
+  - [ ] concerns
+- `VirtualPlace`
+  - [ ] hasUrl
