@@ -346,6 +346,9 @@
       <elementImport xmi:id="_glo3cL7XEe2g9M79Y7jp8Q" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       <elementImport xmi:id="_jEwlQL7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
       <elementImport xmi:id="_mAYB0L7XEe2g9M79Y7jp8Q" importedElement="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <generalization xmi:id="_hu_EYMWWEe26iI6Lh4O3Ng">
+        <general xmi:type="uml:Interface" href="common.uml#_furxINxVEeyr_asPBQgiSQ"/>
+      </generalization>
       <ownedOperation xmi:id="_Ee79YL7VEe2g9M79Y7jp8Q" name="getQuantity">
         <ownedParameter xmi:id="_HLb_4L7VEe2g9M79Y7jp8Q" name="quantity" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
@@ -554,6 +557,10 @@
       <elementImport xmi:id="_1oUnEL7XEe2g9M79Y7jp8Q" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       <elementImport xmi:id="_28XB0L7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
       <elementImport xmi:id="_37h_0L7XEe2g9M79Y7jp8Q" importedElement="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <ownedAttribute xmi:id="_m5T0MMWWEe26iI6Lh4O3Ng" name="description">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qXqKYMWWEe26iI6Lh4O3Ng"/>
+      </ownedAttribute>
       <ownedAttribute xmi:id="_0hYCkL7WEe2g9M79Y7jp8Q" name="quantity">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
       </ownedAttribute>
@@ -759,4 +766,9 @@
   <datafoodconsortium_connector:initializer xmi:id="_GZNS4L7vEe2g9M79Y7jp8Q" property="_j0j4gPOaEey60OpxS9_JRQ" base_Parameter="_AoLvcL7vEe2g9M79Y7jp8Q"/>
   <datafoodconsortium_connector:initializer xmi:id="_HOGTgL7vEe2g9M79Y7jp8Q" property="_o8eNgPOaEey60OpxS9_JRQ" base_Parameter="_BgDLkL7vEe2g9M79Y7jp8Q"/>
   <datafoodconsortium_connector:setter xmi:id="_oMejoL7wEe2g9M79Y7jp8Q" base_Operation="_lUUDsL7wEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_s4z4gMWWEe26iI6Lh4O3Ng" base_Property="_m5T0MMWWEe26iI6Lh4O3Ng">
+    <getter href="common.uml#_tMdaUNxUEeyr_asPBQgiSQ"/>
+    <setter href="common.uml#_ZcvkYFUnEe2_KYs77o2hVQ"/>
+  </datafoodconsortium_connector:property>
+  <datafoodconsortium_connector:semantic xmi:id="_s44J8MWWEe26iI6Lh4O3Ng" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#description" base_Element="_m5T0MMWWEe26iI6Lh4O3Ng"/>
 </xmi:XMI>
