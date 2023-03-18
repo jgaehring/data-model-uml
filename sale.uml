@@ -16,12 +16,17 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:id="_DSF2gPSEEeyWTI9HNBbtRg" name="getOfferedProduct">
-        <ownedParameter xmi:id="_Ia4VQPSEEeyWTI9HNBbtRg" direction="return">
+        <ownedParameter xmi:id="_Ia4VQPSEEeyWTI9HNBbtRg" name="offeredProduct" direction="return">
           <type xmi:type="uml:Interface" href="product.uml#_OtRegAaaEe26esJmMoAMaw"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:id="_Gr2-sPU0EeykiLqdyI8FQA" name="addOffer">
         <ownedParameter xmi:id="_KyqcAPU0EeykiLqdyI8FQA" name="offer" type="_G94CgAadEe26esJmMoAMaw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_HZqmkLwLEe2Lyp3hOvoKhw" name="setOfferedProduct">
+        <ownedParameter xmi:id="_HZqmkbwLEe2Lyp3hOvoKhw" name="offeredProduct">
+          <type xmi:type="uml:Interface" href="product.uml#_OtRegAaaEe26esJmMoAMaw"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_rPH3MOZVEeybgd1DwlK4YQ" name="Catalogable">
@@ -29,9 +34,16 @@
         <body>This interface should be implemented by a marketable entity (CatalogItem).</body>
       </ownedComment>
       <elementImport xmi:id="__f-cYPOqEey60OpxS9_JRQ" importedElement="_U9L-0OZYEeybgd1DwlK4YQ"/>
-      <ownedOperation xmi:id="_9RvdMOZXEeybgd1DwlK4YQ" name="getRepository">
-        <ownedParameter xmi:id="_Fwz7QOZYEeybgd1DwlK4YQ" name="repository" type="_U9L-0OZYEeybgd1DwlK4YQ" direction="return">
+      <ownedOperation xmi:id="_9RvdMOZXEeybgd1DwlK4YQ" name="getCatalogs">
+        <ownedParameter xmi:id="_Fwz7QOZYEeybgd1DwlK4YQ" name="repository" visibility="public" type="_U9L-0OZYEeybgd1DwlK4YQ" direction="return">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HRHQYOZYEeybgd1DwlK4YQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_puCnYL7MEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_z2xx8L7MEe2g9M79Y7jp8Q" name="registerInCatalog">
+        <ownedParameter xmi:id="_z2xx8b7MEe2g9M79Y7jp8Q" name="repository" visibility="public" type="_U9L-0OZYEeybgd1DwlK4YQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z2xx8r7MEe2g9M79Y7jp8Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z2xx877MEe2g9M79Y7jp8Q" value="1"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -53,22 +65,55 @@
           <type xmi:type="uml:Interface" href="agent.uml#_USLgQAaUEe26esJmMoAMaw"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:id="_4cB7ALz5Ee2XudOCHEWPqA" name="setOfferedItem">
+        <ownedParameter xmi:id="_4cB7Abz5Ee2XudOCHEWPqA" name="offeredItem" type="_pcawwAaREe26esJmMoAMaw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4cB7Arz5Ee2XudOCHEWPqA" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_8yiBMLz5Ee2XudOCHEWPqA" name="setCustomerCategory">
+        <ownedParameter xmi:id="_8yiBMbz5Ee2XudOCHEWPqA" name="customerCategory">
+          <type xmi:type="uml:Interface" href="agent.uml#_USLgQAaUEe26esJmMoAMaw"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_U9L-0OZYEeybgd1DwlK4YQ" name="Browsable">
       <ownedComment xmi:id="_9p7XAOdEEeyey8O34-FiDg">
         <body>This interface should be implemented by an entity that can list Catalogable elements (Repository). </body>
       </ownedComment>
       <elementImport xmi:id="_DSfEsPOrEey60OpxS9_JRQ" importedElement="_rPH3MOZVEeybgd1DwlK4YQ"/>
+      <elementImport xmi:id="_TPIm0L7LEe2g9M79Y7jp8Q">
+        <importedElement xmi:type="uml:Interface" href="agent.uml#_QDLJMAaUEe26esJmMoAMaw"/>
+      </elementImport>
       <ownedOperation xmi:id="_b1RQ8OZYEeybgd1DwlK4YQ" name="getMaintainers">
-        <ownedParameter xmi:id="_rjp1YOZYEeybgd1DwlK4YQ" name="maintainers" type="_rPH3MOZVEeybgd1DwlK4YQ" direction="return">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ssa0QOZYEeybgd1DwlK4YQ" value="1"/>
+        <ownedParameter xmi:id="_rjp1YOZYEeybgd1DwlK4YQ" name="maintainers" direction="return">
+          <type xmi:type="uml:Interface" href="agent.uml#_QDLJMAaUEe26esJmMoAMaw"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ssa0QOZYEeybgd1DwlK4YQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uFzCAOZYEeybgd1DwlK4YQ" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_dwpYgOZYEeybgd1DwlK4YQ" name="getListedItems">
+      <ownedOperation xmi:id="_dwpYgOZYEeybgd1DwlK4YQ" name="getItems">
         <ownedParameter xmi:id="_idC2MOZYEeybgd1DwlK4YQ" name="listedItems" type="_rPH3MOZVEeybgd1DwlK4YQ" direction="return">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kc-GkOZYEeybgd1DwlK4YQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k66m0OZYEeybgd1DwlK4YQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_fwY2AL7NEe2g9M79Y7jp8Q" name="removeItem">
+        <ownedParameter xmi:id="_fwY2Ab7NEe2g9M79Y7jp8Q" name="item" visibility="public" type="_rPH3MOZVEeybgd1DwlK4YQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fwY2Ar7NEe2g9M79Y7jp8Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fwY2A77NEe2g9M79Y7jp8Q" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_hdW4sL7OEe2g9M79Y7jp8Q" name="addItem">
+        <ownedParameter xmi:id="_hdW4sb7OEe2g9M79Y7jp8Q" name="item" type="_rPH3MOZVEeybgd1DwlK4YQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hdW4sr7OEe2g9M79Y7jp8Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hdW4s77OEe2g9M79Y7jp8Q" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MBSa4L7dEe2g9M79Y7jp8Q" name="addMaintainer">
+        <ownedParameter xmi:id="_MBSa4b7dEe2g9M79Y7jp8Q" name="maintainer">
+          <type xmi:type="uml:Interface" href="agent.uml#_QDLJMAaUEe26esJmMoAMaw"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MBSa4r7dEe2g9M79Y7jp8Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MBSa477dEe2g9M79Y7jp8Q" value="1"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -94,8 +139,12 @@
       <ownedComment xmi:id="_J7RM0OdFEeyey8O34-FiDg">
         <body>This interface should be implemented by an entity that can be sold for a price like Offer.</body>
       </ownedComment>
+      <elementImport xmi:id="_DGyC8Lz5Ee2XudOCHEWPqA" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       <ownedOperation xmi:id="_ZLjAMOZZEeybgd1DwlK4YQ" name="getPrice">
         <ownedParameter xmi:id="_DZ6s8POsEey60OpxS9_JRQ" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lUUDsL7wEe2g9M79Y7jp8Q" name="setPrice">
+        <ownedParameter xmi:id="_lUUDsb7wEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_SH-BAOZfEeybgd1DwlK4YQ" name="Invoiceable">
@@ -119,8 +168,20 @@
     <packagedElement xmi:type="uml:Interface" xmi:id="_pcawwAaREe26esJmMoAMaw" name="ICatalogItem">
       <elementImport xmi:id="__rKD0AaREe26esJmMoAMaw" importedElement="_dqLEcOZVEeybgd1DwlK4YQ"/>
       <elementImport xmi:id="_AEDE8AaSEe26esJmMoAMaw" importedElement="_NLMMsOZZEeybgd1DwlK4YQ"/>
+      <elementImport xmi:id="_7uejcL7LEe2g9M79Y7jp8Q" importedElement="_rPH3MOZVEeybgd1DwlK4YQ"/>
       <generalization xmi:id="_wiYt4AaREe26esJmMoAMaw" general="_dqLEcOZVEeybgd1DwlK4YQ"/>
       <generalization xmi:id="_13S9EAaREe26esJmMoAMaw" general="_NLMMsOZZEeybgd1DwlK4YQ"/>
+      <generalization xmi:id="_--imAL7LEe2g9M79Y7jp8Q" general="_rPH3MOZVEeybgd1DwlK4YQ"/>
+      <ownedOperation xmi:id="_KIcTQPPUEey60OpxS9_JRQ" name="getSku">
+        <ownedParameter xmi:id="_L8YWEPPUEey60OpxS9_JRQ" name="sku" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_dPfqYLwLEe2Lyp3hOvoKhw" name="setSku">
+        <ownedParameter xmi:id="_dPfqYbwLEe2Lyp3hOvoKhw" name="sku">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_G94CgAadEe26esJmMoAMaw" name="IOffer">
       <elementImport xmi:id="_oBp7gPPQEey60OpxS9_JRQ" importedElement="_AucwcOZfEeybgd1DwlK4YQ"/>
@@ -130,8 +191,41 @@
       <generalization xmi:id="_ScEkIAadEe26esJmMoAMaw" general="_xohz0OZWEeybgd1DwlK4YQ"/>
       <generalization xmi:id="_SnDsIAadEe26esJmMoAMaw" general="_NLMMsOZZEeybgd1DwlK4YQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_Kg2aAAadEe26esJmMoAMaw" name="ISaleSession"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Kg2aAAadEe26esJmMoAMaw" name="ISaleSession">
+      <elementImport xmi:id="_P8050L7REe2g9M79Y7jp8Q">
+        <importedElement xmi:type="uml:Interface" href="common.uml#_JqlP4OZdEeybgd1DwlK4YQ"/>
+      </elementImport>
+      <elementImport xmi:id="_sw8WsL7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
+      <generalization xmi:id="_Qdf98L7REe2g9M79Y7jp8Q">
+        <general xmi:type="uml:Interface" href="common.uml#_JqlP4OZdEeybgd1DwlK4YQ"/>
+      </generalization>
+      <ownedOperation xmi:id="_jcDSoL7REe2g9M79Y7jp8Q" name="getQuantity">
+        <ownedParameter xmi:id="_255LYL7REe2g9M79Y7jp8Q" name="quantity" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_6lMYcL7REe2g9M79Y7jp8Q" name="setQuantity">
+        <ownedParameter xmi:id="_6lMYcb7REe2g9M79Y7jp8Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_dpHOML7SEe2g9M79Y7jp8Q" name="getOffers">
+        <ownedParameter xmi:id="_dpHOMb7SEe2g9M79Y7jp8Q" name="offers" type="_G94CgAadEe26esJmMoAMaw" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hmqB0L7SEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hD2PsL7SEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_j-7gwL7SEe2g9M79Y7jp8Q" name="addOffer">
+        <ownedParameter xmi:id="_j-7gwb7SEe2g9M79Y7jp8Q" name="offer" type="_G94CgAadEe26esJmMoAMaw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-7gwr7SEe2g9M79Y7jp8Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-7gw77SEe2g9M79Y7jp8Q" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_Mdu6wLBBEe2nsoIM8Z6iaQ" name="IPrice">
+      <elementImport xmi:id="_2irQwLwJEe2Lyp3hOvoKhw">
+        <importedElement xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
+      </elementImport>
       <ownedOperation xmi:id="_kfwJULBBEe2nsoIM8Z6iaQ" name="getValue">
         <ownedParameter xmi:id="_qORLULBBEe2nsoIM8Z6iaQ" name="value" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
@@ -145,6 +239,22 @@
       </ownedOperation>
       <ownedOperation xmi:id="_nmjiMLBBEe2nsoIM8Z6iaQ" name="getUnit">
         <ownedParameter xmi:id="_yIfP4LBBEe2nsoIM8Z6iaQ" name="unit" direction="return">
+          <type xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_terYUL6IEe2SVd1P6DdWSw" name="setValue">
+        <ownedParameter xmi:id="_terYUb6IEe2SVd1P6DdWSw" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_terYUr6IEe2SVd1P6DdWSw" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t_dxML6IEe2SVd1P6DdWSw" name="setVatRate">
+        <ownedParameter xmi:id="_t_dxMb6IEe2SVd1P6DdWSw" name="vatRate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uU-HIL6IEe2SVd1P6DdWSw" name="setUnit">
+        <ownedParameter xmi:id="_uU-HIb6IEe2SVd1P6DdWSw" name="unit">
           <type xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
         </ownedParameter>
       </ownedOperation>
@@ -176,8 +286,100 @@
         <ownedParameter xmi:id="_M9mJMPPZEey60OpxS9_JRQ" name="catalogItem" type="_pcawwAaREe26esJmMoAMaw"/>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_8S9CIL7OEe2g9M79Y7jp8Q" name="ICatalog">
+      <elementImport xmi:id="_IIPDgL7OEe2g9M79Y7jp8Q" importedElement="_U9L-0OZYEeybgd1DwlK4YQ"/>
+      <generalization xmi:id="_FpjlIL7PEe2g9M79Y7jp8Q" general="_U9L-0OZYEeybgd1DwlK4YQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_AEigkL7TEe2g9M79Y7jp8Q" name="IOrder">
+      <elementImport xmi:id="_VagbwL7XEe2g9M79Y7jp8Q" importedElement="_Kg2aAAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_Y7FmkL7XEe2g9M79Y7jp8Q" importedElement="_97fegL7UEe2g9M79Y7jp8Q"/>
+      <elementImport xmi:id="_a3wHkL7XEe2g9M79Y7jp8Q">
+        <importedElement xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+      </elementImport>
+      <ownedOperation xmi:id="_6uzVgL7TEe2g9M79Y7jp8Q" name="getNumber">
+        <ownedParameter xmi:id="_9CWFcL7TEe2g9M79Y7jp8Q" name="number" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KGrecL7UEe2g9M79Y7jp8Q" name="getDate">
+        <ownedParameter xmi:id="_KGrecb7UEe2g9M79Y7jp8Q" name="date" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_R1QTsL7UEe2g9M79Y7jp8Q" name="getSaleSession">
+        <ownedParameter xmi:id="_R1QTsb7UEe2g9M79Y7jp8Q" name="saleSession" type="_Kg2aAAadEe26esJmMoAMaw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_fc2KwL7UEe2g9M79Y7jp8Q" name="getClient">
+        <ownedParameter xmi:id="_fc2Kwb7UEe2g9M79Y7jp8Q" name="client" direction="return">
+          <type xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rPItEL7UEe2g9M79Y7jp8Q" name="getLines">
+        <ownedParameter xmi:id="_rPItEb7UEe2g9M79Y7jp8Q" name="lines" type="_97fegL7UEe2g9M79Y7jp8Q" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MFis8L7WEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mf9_IL7WEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BsgHcL7UEe2g9M79Y7jp8Q" name="setNumber">
+        <ownedParameter xmi:id="_BsgHcb7UEe2g9M79Y7jp8Q" name="number">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MlaxwL7UEe2g9M79Y7jp8Q" name="setDate">
+        <ownedParameter xmi:id="_MlbY0L7UEe2g9M79Y7jp8Q" name="date">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_XLhNwL7UEe2g9M79Y7jp8Q" name="setSaleSession">
+        <ownedParameter xmi:id="_XLhNwb7UEe2g9M79Y7jp8Q" name="saleSession" type="_Kg2aAAadEe26esJmMoAMaw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lEfIsL7UEe2g9M79Y7jp8Q" name="setClient">
+        <ownedParameter xmi:id="_lEfIsb7UEe2g9M79Y7jp8Q" name="client">
+          <type xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_I6wL8L7WEe2g9M79Y7jp8Q" name="addLine">
+        <ownedParameter xmi:id="_I6wL8b7WEe2g9M79Y7jp8Q" name="line" type="_97fegL7UEe2g9M79Y7jp8Q"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_97fegL7UEe2g9M79Y7jp8Q" name="IOrderLine">
+      <elementImport xmi:id="_glo3cL7XEe2g9M79Y7jp8Q" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+      <elementImport xmi:id="_jEwlQL7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_mAYB0L7XEe2g9M79Y7jp8Q" importedElement="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <ownedOperation xmi:id="_Ee79YL7VEe2g9M79Y7jp8Q" name="getQuantity">
+        <ownedParameter xmi:id="_HLb_4L7VEe2g9M79Y7jp8Q" name="quantity" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KfCeoL7VEe2g9M79Y7jp8Q" name="getPrice">
+        <ownedParameter xmi:id="_KfCeob7VEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_NnDYcL7VEe2g9M79Y7jp8Q" name="getOffer">
+        <ownedParameter xmi:id="_NnDYcb7VEe2g9M79Y7jp8Q" name="offer" type="_G94CgAadEe26esJmMoAMaw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Oh4pAL7VEe2g9M79Y7jp8Q" name="getOrder">
+        <ownedParameter xmi:id="_Oh4pAb7VEe2g9M79Y7jp8Q" name="order" type="_AEigkL7TEe2g9M79Y7jp8Q" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_m_iDoL7VEe2g9M79Y7jp8Q" name="setQuantity">
+        <ownedParameter xmi:id="_m_iDob7VEe2g9M79Y7jp8Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_owgSAL7VEe2g9M79Y7jp8Q" name="setPrice">
+        <ownedParameter xmi:id="_owgSAb7VEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u9Nr4L7VEe2g9M79Y7jp8Q" name="setOffer">
+        <ownedParameter xmi:id="_u9Nr4b7VEe2g9M79Y7jp8Q" name="offer" type="_G94CgAadEe26esJmMoAMaw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_whIVsL7VEe2g9M79Y7jp8Q" name="setOrder">
+        <ownedParameter xmi:id="_whI8wL7VEe2g9M79Y7jp8Q" name="order" type="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_gJ34wLBCEe2nsoIM8Z6iaQ" name="Price">
       <elementImport xmi:id="_jYfw4LBCEe2nsoIM8Z6iaQ" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+      <elementImport xmi:id="_2MaA8Lq4Ee2D1dFQsjtXzg">
+        <importedElement xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
+      </elementImport>
       <ownedAttribute xmi:id="_uv5uALBCEe2nsoIM8Z6iaQ" name="value">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
         <defaultValue xmi:type="uml:LiteralReal" xmi:id="_zx194LBCEe2nsoIM8Z6iaQ"/>
@@ -190,7 +392,18 @@
         <type xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
       </ownedAttribute>
       <interfaceRealization xmi:id="_lkqtgLBCEe2nsoIM8Z6iaQ" client="_gJ34wLBCEe2nsoIM8Z6iaQ" supplier="_Mdu6wLBBEe2nsoIM8Z6iaQ" contract="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
-      <ownedOperation xmi:id="_NjoPALBFEe2nsoIM8Z6iaQ" name="Price"/>
+      <ownedOperation xmi:id="_NjoPALBFEe2nsoIM8Z6iaQ" name="Price">
+        <ownedParameter xmi:id="_RStjwL6GEe2SVd1P6DdWSw" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_VGxrQL6GEe2SVd1P6DdWSw" name="vatRate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_W364wL6GEe2SVd1P6DdWSw" name="unit">
+          <type xmi:type="uml:Interface" href="common.uml#_hyQD8E1qEe2Pq5gmFYw1MQ"/>
+        </ownedParameter>
+      </ownedOperation>
+      <nestedClassifier xmi:type="uml:Interface" xmi:id="_71GZwL7UEe2g9M79Y7jp8Q" name="IOrderLine"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_yoOnMOZfEeybgd1DwlK4YQ" name="CatalogItem">
       <elementImport xmi:id="_VAr2sPOpEey60OpxS9_JRQ" importedElement="_G94CgAadEe26esJmMoAMaw"/>
@@ -198,6 +411,7 @@
         <importedElement xmi:type="uml:Interface" href="product.uml#_OtRegAaaEe26esJmMoAMaw"/>
       </elementImport>
       <elementImport xmi:id="_MGMoMAaSEe26esJmMoAMaw" importedElement="_pcawwAaREe26esJmMoAMaw"/>
+      <elementImport xmi:id="_pkEjUL7dEe2g9M79Y7jp8Q" importedElement="_U9L-0OZYEeybgd1DwlK4YQ"/>
       <ownedAttribute xmi:id="_i4M-EPSDEeyWTI9HNBbtRg" name="product">
         <type xmi:type="uml:Interface" href="product.uml#_OtRegAaaEe26esJmMoAMaw"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_luYhAPSDEeyWTI9HNBbtRg" value="1"/>
@@ -213,15 +427,28 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XZ1U0POoEey60OpxS9_JRQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XLDR8POoEey60OpxS9_JRQ" value="*"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_RfexoL7MEe2g9M79Y7jp8Q" name="catalogs" type="_U9L-0OZYEeybgd1DwlK4YQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Sri8IL7MEe2g9M79Y7jp8Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TRs9ML7MEe2g9M79Y7jp8Q" value="*"/>
+      </ownedAttribute>
       <interfaceRealization xmi:id="_XKrQcOZgEeybgd1DwlK4YQ" client="_yoOnMOZfEeybgd1DwlK4YQ" supplier="_dqLEcOZVEeybgd1DwlK4YQ _pcawwAaREe26esJmMoAMaw" contract="_pcawwAaREe26esJmMoAMaw"/>
       <ownedOperation xmi:id="_gARUcPPPEey60OpxS9_JRQ" name="CatalogItem">
         <ownedParameter xmi:id="_id2H4PSEEeyWTI9HNBbtRg" name="product">
           <type xmi:type="uml:Interface" href="product.uml#_OtRegAaaEe26esJmMoAMaw"/>
         </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_KIcTQPPUEey60OpxS9_JRQ" name="getSku">
-        <ownedParameter xmi:id="_L8YWEPPUEey60OpxS9_JRQ" name="sku" direction="return">
+        <ownedParameter xmi:id="_TSWlAL7uEe2g9M79Y7jp8Q" name="sku">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WNhVoL7uEe2g9M79Y7jp8Q" name="stockLimitation">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_XbMCoL7uEe2g9M79Y7jp8Q" name="offers" type="_G94CgAadEe26esJmMoAMaw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fLPekL7uEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eqHHcL7uEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZFfoUL7uEe2g9M79Y7jp8Q" name="catalogs" type="_U9L-0OZYEeybgd1DwlK4YQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmhJwL7uEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h_dSoL7uEe2g9M79Y7jp8Q" value="*"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -231,6 +458,7 @@
         <importedElement xmi:type="uml:Interface" href="agent.uml#_USLgQAaUEe26esJmMoAMaw"/>
       </elementImport>
       <elementImport xmi:id="_a-79EAadEe26esJmMoAMaw" importedElement="_G94CgAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_4V5TQLz4Ee2XudOCHEWPqA" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       <ownedAttribute xmi:id="_j0j4gPOaEey60OpxS9_JRQ" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
       <ownedAttribute xmi:id="_o8eNgPOaEey60OpxS9_JRQ" name="stockLimitation">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
@@ -247,11 +475,125 @@
         <ownedParameter xmi:id="_mo8fUPPUEey60OpxS9_JRQ" name="offeredTo">
           <type xmi:type="uml:Interface" href="agent.uml#_USLgQAaUEe26esJmMoAMaw"/>
         </ownedParameter>
+        <ownedParameter xmi:id="_AoLvcL7vEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+        <ownedParameter xmi:id="_BgDLkL7vEe2g9M79Y7jp8Q" name="stockLimitation">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_zp5fkOZfEeybgd1DwlK4YQ" name="Order"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_0kv-QOZfEeybgd1DwlK4YQ" name="OrderLine"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_PQluwOZgEeybgd1DwlK4YQ" name="Repository"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bCaZEL7PEe2g9M79Y7jp8Q" name="SaleSession">
+      <elementImport xmi:id="_eYmRwL7PEe2g9M79Y7jp8Q" importedElement="_Kg2aAAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_GyxWUL7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
+      <ownedAttribute xmi:id="_syGG4L7PEe2g9M79Y7jp8Q" name="beginDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ve0L0L7PEe2g9M79Y7jp8Q" name="endDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_xirhAL7PEe2g9M79Y7jp8Q" name="quantity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5LzOgL7PEe2g9M79Y7jp8Q" name="offers" type="_G94CgAadEe26esJmMoAMaw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5_Sg8L7PEe2g9M79Y7jp8Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6dguAL7PEe2g9M79Y7jp8Q" value="*"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_hT6MUL7PEe2g9M79Y7jp8Q" client="_bCaZEL7PEe2g9M79Y7jp8Q" supplier="_Kg2aAAadEe26esJmMoAMaw" contract="_Kg2aAAadEe26esJmMoAMaw"/>
+      <ownedOperation xmi:id="_H6-NIL7aEe2g9M79Y7jp8Q" name="SaleSession">
+        <ownedParameter xmi:id="_MrmDgL7aEe2g9M79Y7jp8Q" name="beginDate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Osm5AL7aEe2g9M79Y7jp8Q" name="endDate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_QMMccL7aEe2g9M79Y7jp8Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RCr_kL7aEe2g9M79Y7jp8Q" name="offers" type="_G94CgAadEe26esJmMoAMaw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VWpvIL7aEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U5eq8L7aEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zp5fkOZfEeybgd1DwlK4YQ" name="Order">
+      <elementImport xmi:id="_E7-woL7TEe2g9M79Y7jp8Q" importedElement="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <elementImport xmi:id="_JzptYL7XEe2g9M79Y7jp8Q" importedElement="_Kg2aAAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_NBlB8L7XEe2g9M79Y7jp8Q" importedElement="_97fegL7UEe2g9M79Y7jp8Q"/>
+      <elementImport xmi:id="_P5JE8L7XEe2g9M79Y7jp8Q">
+        <importedElement xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+      </elementImport>
+      <ownedAttribute xmi:id="_PHQ44L7TEe2g9M79Y7jp8Q" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RdqIgL7TEe2g9M79Y7jp8Q" name="date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_T5tUML7TEe2g9M79Y7jp8Q" name="saleSession" type="_Kg2aAAadEe26esJmMoAMaw"/>
+      <ownedAttribute xmi:id="_WEyEoL7TEe2g9M79Y7jp8Q" name="lines" type="_97fegL7UEe2g9M79Y7jp8Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jHSxUL7WEe2g9M79Y7jp8Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iqqfsL7WEe2g9M79Y7jp8Q" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_W5dC0L7TEe2g9M79Y7jp8Q" name="client">
+        <type xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_HgAMkL7TEe2g9M79Y7jp8Q" client="_zp5fkOZfEeybgd1DwlK4YQ" supplier="_AEigkL7TEe2g9M79Y7jp8Q" contract="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <ownedOperation xmi:id="_bYmqgL7aEe2g9M79Y7jp8Q" name="Order">
+        <ownedParameter xmi:id="_ewDugL7aEe2g9M79Y7jp8Q" name="number">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_wmvcML7aEe2g9M79Y7jp8Q" name="date">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_yoJ6UL7aEe2g9M79Y7jp8Q" name="saleSession" type="_Kg2aAAadEe26esJmMoAMaw"/>
+        <ownedParameter xmi:id="_0Kt5QL7aEe2g9M79Y7jp8Q" name="client">
+          <type xmi:type="uml:Class" href="agent.uml#_0m9XsOBfEeyy8cy9J23hHA"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0kv-QOZfEeybgd1DwlK4YQ" name="OrderLine">
+      <elementImport xmi:id="_pQ07YL7WEe2g9M79Y7jp8Q" importedElement="_97fegL7UEe2g9M79Y7jp8Q"/>
+      <elementImport xmi:id="_1oUnEL7XEe2g9M79Y7jp8Q" importedElement="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+      <elementImport xmi:id="_28XB0L7XEe2g9M79Y7jp8Q" importedElement="_G94CgAadEe26esJmMoAMaw"/>
+      <elementImport xmi:id="_37h_0L7XEe2g9M79Y7jp8Q" importedElement="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <ownedAttribute xmi:id="_0hYCkL7WEe2g9M79Y7jp8Q" name="quantity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5jB-kL7WEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+      <ownedAttribute xmi:id="_6TcH0L7WEe2g9M79Y7jp8Q" name="offer" type="_G94CgAadEe26esJmMoAMaw"/>
+      <ownedAttribute xmi:id="_6-IqoL7WEe2g9M79Y7jp8Q" name="order" type="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      <interfaceRealization xmi:id="_r5x6oL7WEe2g9M79Y7jp8Q" client="_0kv-QOZfEeybgd1DwlK4YQ" supplier="_97fegL7UEe2g9M79Y7jp8Q" contract="_97fegL7UEe2g9M79Y7jp8Q"/>
+      <ownedOperation xmi:id="_GvFMUL7bEe2g9M79Y7jp8Q" name="OrderLine">
+        <ownedParameter xmi:id="_IvoHwL7bEe2g9M79Y7jp8Q" name="quantity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_LOKmwL7bEe2g9M79Y7jp8Q" name="price" type="_Mdu6wLBBEe2nsoIM8Z6iaQ"/>
+        <ownedParameter xmi:id="_Wq5IwL7bEe2g9M79Y7jp8Q" name="offer" type="_G94CgAadEe26esJmMoAMaw"/>
+        <ownedParameter xmi:id="_XUyaUL7bEe2g9M79Y7jp8Q" name="order" type="_AEigkL7TEe2g9M79Y7jp8Q"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PQluwOZgEeybgd1DwlK4YQ" name="Catalog">
+      <elementImport xmi:id="_VDbrcL7KEe2g9M79Y7jp8Q" importedElement="_8S9CIL7OEe2g9M79Y7jp8Q"/>
+      <elementImport xmi:id="_BLLVUL7PEe2g9M79Y7jp8Q">
+        <importedElement xmi:type="uml:Interface" href="agent.uml#_QDLJMAaUEe26esJmMoAMaw"/>
+      </elementImport>
+      <elementImport xmi:id="_TAwEML7ZEe2g9M79Y7jp8Q" importedElement="_rPH3MOZVEeybgd1DwlK4YQ"/>
+      <elementImport xmi:id="_kzaGIL7cEe2g9M79Y7jp8Q" importedElement="_pcawwAaREe26esJmMoAMaw"/>
+      <ownedAttribute xmi:id="_cZTFwL7KEe2g9M79Y7jp8Q" name="items" type="_pcawwAaREe26esJmMoAMaw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hNgboL7KEe2g9M79Y7jp8Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gt0O8L7KEe2g9M79Y7jp8Q" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_3gZwwL7cEe2g9M79Y7jp8Q" name="maintainers">
+        <type xmi:type="uml:Interface" href="agent.uml#_QDLJMAaUEe26esJmMoAMaw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5JhDoL7cEe2g9M79Y7jp8Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5jqpAL7cEe2g9M79Y7jp8Q" value="*"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_KvlgQL7OEe2g9M79Y7jp8Q" client="_PQluwOZgEeybgd1DwlK4YQ" supplier="_U9L-0OZYEeybgd1DwlK4YQ _8S9CIL7OEe2g9M79Y7jp8Q" contract="_8S9CIL7OEe2g9M79Y7jp8Q"/>
+      <ownedOperation xmi:id="_qNb7UL7bEe2g9M79Y7jp8Q" name="Catalog">
+        <ownedParameter xmi:id="_r0Eh8L7bEe2g9M79Y7jp8Q" name="items" type="_pcawwAaREe26esJmMoAMaw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yV1l0L7bEe2g9M79Y7jp8Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x5Uo8L7bEe2g9M79Y7jp8Q" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <profileApplication xmi:id="_ckCv4POoEey60OpxS9_JRQ">
       <eAnnotations xmi:id="_ckI2gPOoEey60OpxS9_JRQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="connector.profile.uml#_3OuvQK70Ee2D9pavmCI82g"/>
@@ -260,9 +602,9 @@
     </profileApplication>
   </uml:Package>
   <datafoodconsortium_connector:semantic xmi:id="_fmRx0POoEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#CatalogItem" base_Element="_yoOnMOZfEeybgd1DwlK4YQ"/>
-  <datafoodconsortium_connector:property xmi:id="_ngTCEPOoEey60OpxS9_JRQ" base_Property="_FcvwEPObEey60OpxS9_JRQ" getter="_KIcTQPPUEey60OpxS9_JRQ"/>
+  <datafoodconsortium_connector:property xmi:id="_ngTCEPOoEey60OpxS9_JRQ" base_Property="_FcvwEPObEey60OpxS9_JRQ" getter="_KIcTQPPUEey60OpxS9_JRQ" setter="_dPfqYLwLEe2Lyp3hOvoKhw"/>
   <datafoodconsortium_connector:semantic xmi:id="_ngTpIPOoEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#sku" base_Element="_FcvwEPObEey60OpxS9_JRQ"/>
-  <datafoodconsortium_connector:property xmi:id="_oV0U0POoEey60OpxS9_JRQ" base_Property="_ElYqQPObEey60OpxS9_JRQ" getter="_EKqnYOZZEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_oV0U0POoEey60OpxS9_JRQ" base_Property="_ElYqQPObEey60OpxS9_JRQ" getter="_EKqnYOZZEeybgd1DwlK4YQ" setter="_z991QKb1Ee2q8cYuTD88Gg"/>
   <datafoodconsortium_connector:semantic xmi:id="_oV0U0fOoEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#stockLimitation" base_Element="_ElYqQPObEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_pQ1yoPOoEey60OpxS9_JRQ" base_Property="_RqFjwPOoEey60OpxS9_JRQ" getter="_3fBikOZVEeybgd1DwlK4YQ" adder="_Gr2-sPU0EeykiLqdyI8FQA"/>
   <datafoodconsortium_connector:semantic xmi:id="_pQ1yofOoEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#offeredThrough" base_Element="_RqFjwPOoEey60OpxS9_JRQ"/>
@@ -272,11 +614,11 @@
   <datafoodconsortium_connector:getter xmi:id="_rzWC8OtVEey6f7rgFRym3Q" base_Operation="_lGGu4OtVEey6f7rgFRym3Q"/>
   <datafoodconsortium_connector:semantic xmi:id="_pV6DYPOpEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#Offer" base_Element="_zEqEgOZfEeybgd1DwlK4YQ"/>
   <datafoodconsortium_connector:getter xmi:id="_DQA08POqEey60OpxS9_JRQ" base_Operation="_ZLjAMOZZEeybgd1DwlK4YQ"/>
-  <datafoodconsortium_connector:property xmi:id="_FdVBEPOqEey60OpxS9_JRQ" base_Property="_j0j4gPOaEey60OpxS9_JRQ" getter="_ZLjAMOZZEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_FdVBEPOqEey60OpxS9_JRQ" base_Property="_j0j4gPOaEey60OpxS9_JRQ" getter="_ZLjAMOZZEeybgd1DwlK4YQ" setter="_lUUDsL7wEe2g9M79Y7jp8Q"/>
   <datafoodconsortium_connector:semantic xmi:id="_FdVBEfOqEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#price" base_Element="_j0j4gPOaEey60OpxS9_JRQ"/>
-  <datafoodconsortium_connector:property xmi:id="_GahpIPOqEey60OpxS9_JRQ" base_Property="_o8eNgPOaEey60OpxS9_JRQ" getter="_EKqnYOZZEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_GahpIPOqEey60OpxS9_JRQ" base_Property="_o8eNgPOaEey60OpxS9_JRQ" getter="_EKqnYOZZEeybgd1DwlK4YQ" setter="_z991QKb1Ee2q8cYuTD88Gg"/>
   <datafoodconsortium_connector:semantic xmi:id="_GahpIfOqEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#stockLimitation" base_Element="_o8eNgPOaEey60OpxS9_JRQ"/>
-  <datafoodconsortium_connector:property xmi:id="_IQGqsPOqEey60OpxS9_JRQ" base_Property="_6WOw0POpEey60OpxS9_JRQ" getter="_Oz-PwOZWEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_IQGqsPOqEey60OpxS9_JRQ" base_Property="_6WOw0POpEey60OpxS9_JRQ" getter="_Oz-PwOZWEeybgd1DwlK4YQ" setter="_4cB7ALz5Ee2XudOCHEWPqA"/>
   <datafoodconsortium_connector:semantic xmi:id="_IQHRwPOqEey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#offeredItem" base_Element="_6WOw0POpEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:getter xmi:id="_FrjN0POrEey60OpxS9_JRQ" base_Operation="_EKqnYOZZEeybgd1DwlK4YQ"/>
   <datafoodconsortium_connector:getter xmi:id="_G9q9APOrEey60OpxS9_JRQ" base_Operation="_9RvdMOZXEeybgd1DwlK4YQ"/>
@@ -288,12 +630,12 @@
   <datafoodconsortium_connector:constructor xmi:id="_8xqcMPPPEey60OpxS9_JRQ" base_Operation="_gARUcPPPEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:constructor xmi:id="_KKhTsPPQEey60OpxS9_JRQ" base_Operation="_BEmRAPPQEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:initializer xmi:id="_L-t1MPPQEey60OpxS9_JRQ" property="_6WOw0POpEey60OpxS9_JRQ" base_Parameter="_CUUMcPPQEey60OpxS9_JRQ"/>
-  <datafoodconsortium_connector:property xmi:id="_kMZEsPPREey60OpxS9_JRQ" base_Property="_gLieYPPREey60OpxS9_JRQ" getter="_ZoKDsOZZEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_kMZEsPPREey60OpxS9_JRQ" base_Property="_gLieYPPREey60OpxS9_JRQ" getter="_ZoKDsOZZEeybgd1DwlK4YQ" setter="_8yiBMLz5Ee2XudOCHEWPqA"/>
   <datafoodconsortium_connector:semantic xmi:id="_kMZEsfPREey60OpxS9_JRQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#offeredTo" base_Element="_gLieYPPREey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:getter xmi:id="_PKKgsPPUEey60OpxS9_JRQ" base_Operation="_KIcTQPPUEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:initializer xmi:id="_sxSWkPPUEey60OpxS9_JRQ" property="_gLieYPPREey60OpxS9_JRQ" base_Parameter="_mo8fUPPUEey60OpxS9_JRQ"/>
   <datafoodconsortium_connector:getter xmi:id="_LMFIQPPZEey60OpxS9_JRQ" base_Operation="__mBEEPPYEey60OpxS9_JRQ"/>
-  <datafoodconsortium_connector:property xmi:id="_0FGu8PSDEeyWTI9HNBbtRg" base_Property="_i4M-EPSDEeyWTI9HNBbtRg" getter="_DSF2gPSEEeyWTI9HNBbtRg"/>
+  <datafoodconsortium_connector:property xmi:id="_0FGu8PSDEeyWTI9HNBbtRg" base_Property="_i4M-EPSDEeyWTI9HNBbtRg" getter="_DSF2gPSEEeyWTI9HNBbtRg" setter="_HZqmkLwLEe2Lyp3hOvoKhw"/>
   <datafoodconsortium_connector:semantic xmi:id="_0FLAYPSDEeyWTI9HNBbtRg" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#references" base_Element="_i4M-EPSDEeyWTI9HNBbtRg"/>
   <datafoodconsortium_connector:getter xmi:id="_MQwaoPSEEeyWTI9HNBbtRg" base_Operation="_DSF2gPSEEeyWTI9HNBbtRg"/>
   <datafoodconsortium_connector:initializer xmi:id="_pDu2wPSEEeyWTI9HNBbtRg" property="_i4M-EPSDEeyWTI9HNBbtRg" base_Parameter="_id2H4PSEEeyWTI9HNBbtRg"/>
@@ -303,11 +645,118 @@
   <datafoodconsortium_connector:getter xmi:id="_IKXysLBCEe2nsoIM8Z6iaQ" base_Operation="_nmjiMLBBEe2nsoIM8Z6iaQ"/>
   <datafoodconsortium_connector:semantic xmi:id="_oWLL0LBCEe2nsoIM8Z6iaQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#Price" base_Element="_gJ34wLBCEe2nsoIM8Z6iaQ"/>
   <datafoodconsortium_connector:blankNode xmi:id="_oWLL0bBCEe2nsoIM8Z6iaQ" base_Class="_gJ34wLBCEe2nsoIM8Z6iaQ"/>
-  <datafoodconsortium_connector:property xmi:id="_DVNlILBDEe2nsoIM8Z6iaQ" base_Property="_uv5uALBCEe2nsoIM8Z6iaQ" getter="_kfwJULBBEe2nsoIM8Z6iaQ"/>
+  <datafoodconsortium_connector:property xmi:id="_DVNlILBDEe2nsoIM8Z6iaQ" base_Property="_uv5uALBCEe2nsoIM8Z6iaQ" getter="_kfwJULBBEe2nsoIM8Z6iaQ" setter="_terYUL6IEe2SVd1P6DdWSw"/>
   <datafoodconsortium_connector:semantic xmi:id="_DVNlIbBDEe2nsoIM8Z6iaQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#value" base_Element="_uv5uALBCEe2nsoIM8Z6iaQ"/>
-  <datafoodconsortium_connector:property xmi:id="_EMH_ALBDEe2nsoIM8Z6iaQ" base_Property="_0-CEMLBCEe2nsoIM8Z6iaQ" getter="_mgM-ILBBEe2nsoIM8Z6iaQ"/>
+  <datafoodconsortium_connector:property xmi:id="_EMH_ALBDEe2nsoIM8Z6iaQ" base_Property="_0-CEMLBCEe2nsoIM8Z6iaQ" getter="_mgM-ILBBEe2nsoIM8Z6iaQ" setter="_t_dxML6IEe2SVd1P6DdWSw"/>
   <datafoodconsortium_connector:semantic xmi:id="_EMImELBDEe2nsoIM8Z6iaQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#VATrate" base_Element="_0-CEMLBCEe2nsoIM8Z6iaQ"/>
-  <datafoodconsortium_connector:property xmi:id="_FRcoULBDEe2nsoIM8Z6iaQ" base_Property="_9rY14LBCEe2nsoIM8Z6iaQ" getter="_nmjiMLBBEe2nsoIM8Z6iaQ"/>
+  <datafoodconsortium_connector:property xmi:id="_FRcoULBDEe2nsoIM8Z6iaQ" base_Property="_9rY14LBCEe2nsoIM8Z6iaQ" getter="_nmjiMLBBEe2nsoIM8Z6iaQ" setter="_uU-HIL6IEe2SVd1P6DdWSw"/>
   <datafoodconsortium_connector:semantic xmi:id="_FRdPYLBDEe2nsoIM8Z6iaQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasUnit" base_Element="_9rY14LBCEe2nsoIM8Z6iaQ"/>
   <datafoodconsortium_connector:constructor xmi:id="_Puj1gLBFEe2nsoIM8Z6iaQ" base_Operation="_NjoPALBFEe2nsoIM8Z6iaQ"/>
+  <datafoodconsortium_connector:adder xmi:id="_5xuxQLwKEe2Lyp3hOvoKhw" base_Operation="_Gr2-sPU0EeykiLqdyI8FQA"/>
+  <datafoodconsortium_connector:setter xmi:id="_NTYzALwLEe2Lyp3hOvoKhw" base_Operation="_HZqmkLwLEe2Lyp3hOvoKhw"/>
+  <datafoodconsortium_connector:setter xmi:id="_gnwmsLwLEe2Lyp3hOvoKhw" base_Operation="_dPfqYLwLEe2Lyp3hOvoKhw"/>
+  <datafoodconsortium_connector:setter xmi:id="_AEQQoLz6Ee2XudOCHEWPqA" base_Operation="_4cB7ALz5Ee2XudOCHEWPqA"/>
+  <datafoodconsortium_connector:setter xmi:id="_A1PosLz6Ee2XudOCHEWPqA" base_Operation="_8yiBMLz5Ee2XudOCHEWPqA"/>
+  <datafoodconsortium_connector:initializer xmi:id="_aYmxQL6GEe2SVd1P6DdWSw" property="_uv5uALBCEe2nsoIM8Z6iaQ" base_Parameter="_RStjwL6GEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:initializer xmi:id="_bIWMIL6GEe2SVd1P6DdWSw" property="_0-CEMLBCEe2nsoIM8Z6iaQ" base_Parameter="_VGxrQL6GEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:initializer xmi:id="_b2uVEL6GEe2SVd1P6DdWSw" property="_9rY14LBCEe2nsoIM8Z6iaQ" base_Parameter="_W364wL6GEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:setter xmi:id="_0h_qEL6IEe2SVd1P6DdWSw" base_Operation="_terYUL6IEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:setter xmi:id="_1T7dUL6IEe2SVd1P6DdWSw" base_Operation="_t_dxML6IEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:setter xmi:id="_2HdMAL6IEe2SVd1P6DdWSw" base_Operation="_uU-HIL6IEe2SVd1P6DdWSw"/>
+  <datafoodconsortium_connector:semantic xmi:id="_Yf6ugL7MEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#listedIn" base_Element="_RfexoL7MEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:propertyMultiple xmi:id="_Yf-Y4L7MEe2g9M79Y7jp8Q" base_Property="_RfexoL7MEe2g9M79Y7jp8Q" getter="_9RvdMOZXEeybgd1DwlK4YQ" adder="_z2xx8L7MEe2g9M79Y7jp8Q" remover="_fwY2AL7NEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:adder xmi:id="_40dz8L7MEe2g9M79Y7jp8Q" base_Operation="_z2xx8L7MEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:remover xmi:id="_kiTs4L7NEe2g9M79Y7jp8Q" base_Operation="_fwY2AL7NEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_NtPkML7OEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#Catalog" base_Element="_PQluwOZgEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:propertyMultiple xmi:id="_T0MUUL7OEe2g9M79Y7jp8Q" base_Property="_cZTFwL7KEe2g9M79Y7jp8Q" getter="_dwpYgOZYEeybgd1DwlK4YQ" adder="_hdW4sL7OEe2g9M79Y7jp8Q" remover="_fwY2AL7NEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_T0MUUb7OEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#lists" base_Element="_cZTFwL7KEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:adder xmi:id="_oO9vYL7OEe2g9M79Y7jp8Q" base_Operation="_hdW4sL7OEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_k51KIL7PEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#SaleSession" base_Element="_bCaZEL7PEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_-DvN0L7PEe2g9M79Y7jp8Q" base_Property="_syGG4L7PEe2g9M79Y7jp8Q">
+    <getter href="common.uml#_MCm3MOZdEeybgd1DwlK4YQ"/>
+    <setter href="common.uml#_rJxBsL7QEe2g9M79Y7jp8Q"/>
+  </datafoodconsortium_connector:property>
+  <datafoodconsortium_connector:semantic xmi:id="_-DvN0b7PEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#beginDate" base_Element="_syGG4L7PEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="__GNXcL7PEe2g9M79Y7jp8Q" base_Property="_ve0L0L7PEe2g9M79Y7jp8Q">
+    <getter href="common.uml#_OvKkEOZdEeybgd1DwlK4YQ"/>
+    <setter href="common.uml#_soPK0L7QEe2g9M79Y7jp8Q"/>
+  </datafoodconsortium_connector:property>
+  <datafoodconsortium_connector:semantic xmi:id="__GNXcb7PEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#endDate" base_Element="_ve0L0L7PEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_APPcEL7QEe2g9M79Y7jp8Q" base_Property="_xirhAL7PEe2g9M79Y7jp8Q" getter="_jcDSoL7REe2g9M79Y7jp8Q" setter="_6lMYcL7REe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_APPcEb7QEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#quantity" base_Element="_xirhAL7PEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:propertyMultiple xmi:id="_BYgxQL7QEe2g9M79Y7jp8Q" base_Property="_5LzOgL7PEe2g9M79Y7jp8Q" getter="_dpHOML7SEe2g9M79Y7jp8Q" adder="_j-7gwL7SEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_BYgxQb7QEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#lists" base_Element="_5LzOgL7PEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_94q7YL7REe2g9M79Y7jp8Q" base_Operation="_jcDSoL7REe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_-zK0wL7REe2g9M79Y7jp8Q" base_Operation="_6lMYcL7REe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_ots9AL7SEe2g9M79Y7jp8Q" base_Operation="_dpHOML7SEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_ppLGwL7SEe2g9M79Y7jp8Q" base_Operation="_j-7gwL7SEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_KHcI4L7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#Order" base_Element="_zp5fkOZfEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_iH-JsL7TEe2g9M79Y7jp8Q" base_Property="_PHQ44L7TEe2g9M79Y7jp8Q" getter="_6uzVgL7TEe2g9M79Y7jp8Q" setter="_BsgHcL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_iH-wwL7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#orderNumber" base_Element="_PHQ44L7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_jE_LkL7TEe2g9M79Y7jp8Q" base_Property="_RdqIgL7TEe2g9M79Y7jp8Q" getter="_KGrecL7UEe2g9M79Y7jp8Q" setter="_MlaxwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_jE_Lkb7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#date" base_Element="_RdqIgL7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_j_7J0L7TEe2g9M79Y7jp8Q" base_Property="_T5tUML7TEe2g9M79Y7jp8Q" getter="_R1QTsL7UEe2g9M79Y7jp8Q" setter="_XLhNwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_j_7w4L7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#belongsTo" base_Element="_T5tUML7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:propertyMultiple xmi:id="_lEnhAL7TEe2g9M79Y7jp8Q" base_Property="_WEyEoL7TEe2g9M79Y7jp8Q" getter="_rPItEL7UEe2g9M79Y7jp8Q" adder="_I6wL8L7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_lEnhAb7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasPart" base_Element="_WEyEoL7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_l_q0AL7TEe2g9M79Y7jp8Q" base_Property="_W5dC0L7TEe2g9M79Y7jp8Q" getter="_fc2KwL7UEe2g9M79Y7jp8Q" setter="_lEfIsL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_l_q0Ab7TEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#orderedBy" base_Element="_W5dC0L7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_Eh6OUL7UEe2g9M79Y7jp8Q" base_Operation="_6uzVgL7TEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_FhUc4L7UEe2g9M79Y7jp8Q" base_Operation="_BsgHcL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_aSlsYL7UEe2g9M79Y7jp8Q" base_Operation="_KGrecL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_bMZCML7UEe2g9M79Y7jp8Q" base_Operation="_MlaxwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_cFo-YL7UEe2g9M79Y7jp8Q" base_Operation="_R1QTsL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_c6oFoL7UEe2g9M79Y7jp8Q" base_Operation="_XLhNwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_necpsL7UEe2g9M79Y7jp8Q" base_Operation="_fc2KwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_oWUF0L7UEe2g9M79Y7jp8Q" base_Operation="_lEfIsL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_3O51QL7VEe2g9M79Y7jp8Q" base_Operation="_Ee79YL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_380EIL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_4l5dYL7VEe2g9M79Y7jp8Q" base_Operation="_KfCeoL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_5XtU0L7VEe2g9M79Y7jp8Q" base_Operation="_NnDYcL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_6IWuoL7VEe2g9M79Y7jp8Q" base_Operation="_Oh4pAL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_63iI0L7VEe2g9M79Y7jp8Q" base_Operation="_m_iDoL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_7l31gL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_8eanEL7VEe2g9M79Y7jp8Q" base_Operation="_owgSAL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_-fE3QL7VEe2g9M79Y7jp8Q" base_Operation="_u9Nr4L7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="__TDR4L7VEe2g9M79Y7jp8Q" base_Operation="_whIVsL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:getter xmi:id="_UCeuUL7WEe2g9M79Y7jp8Q" base_Operation="_rPItEL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:adder xmi:id="_VkhI0L7WEe2g9M79Y7jp8Q" base_Operation="_I6wL8L7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_vYTP8L7WEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#OrderLine" base_Element="_0kv-QOZfEeybgd1DwlK4YQ"/>
+  <datafoodconsortium_connector:property xmi:id="_-TYSsL7XEe2g9M79Y7jp8Q" base_Property="_0hYCkL7WEe2g9M79Y7jp8Q" getter="_Ee79YL7VEe2g9M79Y7jp8Q" setter="_m_iDoL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_-TYSsb7XEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#quantity" base_Element="_0hYCkL7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="__ZkesL7XEe2g9M79Y7jp8Q" setter="_XLhNwL7UEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="__Zkesb7XEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#belongsTo"/>
+  <datafoodconsortium_connector:property xmi:id="_AYovAL7YEe2g9M79Y7jp8Q" base_Property="_5jB-kL7WEe2g9M79Y7jp8Q" getter="_KfCeoL7VEe2g9M79Y7jp8Q" setter="_owgSAL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_AYovAb7YEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasPrice" base_Element="_5jB-kL7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_Bkp2ML7YEe2g9M79Y7jp8Q" base_Property="_6TcH0L7WEe2g9M79Y7jp8Q" getter="_NnDYcL7VEe2g9M79Y7jp8Q" setter="_u9Nr4L7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_Bkp2Mb7YEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#concerns" base_Element="_6TcH0L7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:property xmi:id="_Cj9XEL7YEe2g9M79Y7jp8Q" base_Property="_6-IqoL7WEe2g9M79Y7jp8Q" getter="_Oh4pAL7VEe2g9M79Y7jp8Q" setter="_whIVsL7VEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_Cj9XEb7YEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#partOf" base_Element="_6-IqoL7WEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:constructor xmi:id="_Yo8mUL7aEe2g9M79Y7jp8Q" base_Operation="_H6-NIL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_hDS8cL7aEe2g9M79Y7jp8Q" property="_syGG4L7PEe2g9M79Y7jp8Q" base_Parameter="_MrmDgL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_h0DrAL7aEe2g9M79Y7jp8Q" property="_ve0L0L7PEe2g9M79Y7jp8Q" base_Parameter="_Osm5AL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_in7X8L7aEe2g9M79Y7jp8Q" property="_xirhAL7PEe2g9M79Y7jp8Q" base_Parameter="_QMMccL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_jmbnkL7aEe2g9M79Y7jp8Q" property="_5LzOgL7PEe2g9M79Y7jp8Q" base_Parameter="_RCr_kL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_5trLgL7aEe2g9M79Y7jp8Q" property="_PHQ44L7TEe2g9M79Y7jp8Q" base_Parameter="_ewDugL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_6b48YL7aEe2g9M79Y7jp8Q" property="_RdqIgL7TEe2g9M79Y7jp8Q" base_Parameter="_wmvcML7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_7NdjQL7aEe2g9M79Y7jp8Q" property="_T5tUML7TEe2g9M79Y7jp8Q" base_Parameter="_yoJ6UL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_78cJIL7aEe2g9M79Y7jp8Q" property="_W5dC0L7TEe2g9M79Y7jp8Q" base_Parameter="_0Kt5QL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:constructor xmi:id="_8wdnEL7aEe2g9M79Y7jp8Q" base_Operation="_bYmqgL7aEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_c2jZwL7bEe2g9M79Y7jp8Q" property="_0hYCkL7WEe2g9M79Y7jp8Q" base_Parameter="_IvoHwL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_dtnkoL7bEe2g9M79Y7jp8Q" property="_5jB-kL7WEe2g9M79Y7jp8Q" base_Parameter="_LOKmwL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_ehQBAL7bEe2g9M79Y7jp8Q" property="_6TcH0L7WEe2g9M79Y7jp8Q" base_Parameter="_Wq5IwL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_fUxvsL7bEe2g9M79Y7jp8Q" property="_6-IqoL7WEe2g9M79Y7jp8Q" base_Parameter="_XUyaUL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:constructor xmi:id="_grqDEL7bEe2g9M79Y7jp8Q" base_Operation="_GvFMUL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_0wEMkL7bEe2g9M79Y7jp8Q" property="_cZTFwL7KEe2g9M79Y7jp8Q" base_Parameter="_r0Eh8L7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:constructor xmi:id="_3cdhYL7bEe2g9M79Y7jp8Q" base_Operation="_qNb7UL7bEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:propertyMultiple xmi:id="_7tbK0L7cEe2g9M79Y7jp8Q" base_Property="_3gZwwL7cEe2g9M79Y7jp8Q" getter="_b1RQ8OZYEeybgd1DwlK4YQ" adder="_MBSa4L7dEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_7tbK0b7cEe2g9M79Y7jp8Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#maintainedBy" base_Element="_3gZwwL7cEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:adder xmi:id="_SsZoAL7dEe2g9M79Y7jp8Q" base_Operation="_MBSa4L7dEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_jE53wL7uEe2g9M79Y7jp8Q" property="_FcvwEPObEey60OpxS9_JRQ" base_Parameter="_TSWlAL7uEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_j5Hi8L7uEe2g9M79Y7jp8Q" property="_ElYqQPObEey60OpxS9_JRQ" base_Parameter="_WNhVoL7uEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_ktY4gL7uEe2g9M79Y7jp8Q" property="_RqFjwPOoEey60OpxS9_JRQ" base_Parameter="_XbMCoL7uEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_leu14L7uEe2g9M79Y7jp8Q" property="_RfexoL7MEe2g9M79Y7jp8Q" base_Parameter="_ZFfoUL7uEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_GZNS4L7vEe2g9M79Y7jp8Q" property="_j0j4gPOaEey60OpxS9_JRQ" base_Parameter="_AoLvcL7vEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:initializer xmi:id="_HOGTgL7vEe2g9M79Y7jp8Q" property="_o8eNgPOaEey60OpxS9_JRQ" base_Parameter="_BgDLkL7vEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:setter xmi:id="_oMejoL7wEe2g9M79Y7jp8Q" base_Operation="_lUUDsL7wEe2g9M79Y7jp8Q"/>
 </xmi:XMI>

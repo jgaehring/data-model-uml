@@ -7,13 +7,108 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- `Enterprise`
+    - add missing getter and setter on properties `description`, `catalogItems` and `suppliedProduct`
+- add multiple missing "adder" stereotype on `Manufacturable`.
+- add missing "adder" stereotype on `Offerable`.
+- profile XMI href.
+- add missing `IUnit` import in `IPrice` and in `Price`.
+- add missing things in `Offer`:
+    - import `IPrice`
+    - add missing setters in properties 
+- add missing `IPrice` in `Payable`.
+- Add missing method in `Marketable`:
+    - `setOfferedItem`
+    - `setCustomerCategory`
+- Set missing getter and setter for the `description` property of `CustomerCategory`.
+
 ### Added
 
-- Stockable:setStockLimitation
-- SuppliedProduct:
+- Add `localizations` parameter in the constructor of:
+    - `Agent`
+    - `Enterprise`
+    - `Person`
+- `Enterprise`
+    - add missing constructor parameters
+- constructor parameters on `DefinedProduct`.
+- `Offerable:setOfferedProduct`
+- `Offer`
+    - add missing constructor parameters.
+- `ICatalogItem`:
+    - add `setSku`
+    - add `Catalogable` generalization
+- `CatalogItem`
+    - set `stockLimitation` setter.
+    - add missing constructor parameters.
+- Stockable:setStockLimitation.
+- `SuppliedProduct`:
     - totalTheoreticalStock (property)
     - getTotalTheoreticalStock()
     - setTotalTheoreticalStock()
+    - add constructor parameters
+- Import `IUnit` in:
+    - `AllergenCharacteristic`
+    - `NutrientCharacteristic`
+    - `PhysicalCharacteristic`
+- `Characteristic`:
+    - add the `blankNode` stereotype
+- `IPrice`:
+    - add `setValue`, `setVatRate` and `setUnit`
+- `Price`:
+    - add constructor parameters
+    - add setter in properties
+- `Catalogable`:
+    - add `registerInCatalog`
+    - add `removeFromCatalog`
+- `Browsable`:
+    - add `removeItem`
+- `ICatalog`
+- `ISaleSession`
+    - add `getQuantity`
+    - add `setQuantity`
+    - add `getOffers`
+    - add `addOffer`
+- `SaleSession`
+- `Ellapsable`
+    - add setters
+    - add stereotypes
+- `IOrder`
+- `IOrderLine`
+- `Order`
+    - add properties
+- `OrderLine`
+    - add properties
+- `Payable`
+    - add `setPrice`
+
+### Changed
+
+- Remove `JsonLdSerializer`.
+- `Enterprise`:
+    - remove `Nameable`
+- Move `getSku` into `ICatalogItem`.
+- Change `getQuantityUnit` and `setQuantityUnit` parameter to `IUnit`.
+- Rename `quantityUnit` and `quantityValue` to `unit` and `value` of:
+    - `QuantitativeValue`
+    - `Characteristic`
+    - `AllergenCharacteristic`
+    - `NutrientCharacteristic`
+    - `PhysicalCharacteristic`
+- Change constructor `unit` paramater type to `IUnit` of:
+    - `QuantitativeValue`
+    - `Characteristic`
+    - `AllergenCharacteristic`
+    - `NutrientCharacteristic`
+    - `PhysicalCharacteristic`
+- Renamed `Repository` to `Catalog`.
+- `Catalogable`
+    - rename `getRepository` to `getCatalog`
+- `Browsable`:
+    - change `getMaintainers` return type to `IEnterprise`
+    - renamed `getListedItems` to `getItems`
+- Delete classes: `ProductType`, `Unit`, `GeographicalOrigin`, `Certification`, `NatureOrigin`, `PartOrigin`, `CharacteristicDimension`, `AllergenDimension`.
 
 ## [1.0.0] - 2023-02-06
 

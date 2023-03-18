@@ -41,6 +41,14 @@ The following stereotypes are defined:
 
 Please refer to the [`SUPPORTED.md` document](https://github.com/datafoodconsortium/data-model-uml/blob/main/SUPPORTED.md).
 
+## Rules for adding a new interface
+
+To be writen.
+
+## Rules for adding a new class
+
+To be writen.
+
 ## Troubleshooting
 
 ### Stereotypes from an applied profile are missing

@@ -117,4 +117,6 @@
   <datafoodconsortium_connector:semantic xmi:id="_ySGpIE2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#Concept" base_Element="_XhC24E2LEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:constructor xmi:id="_mzdpUE2REe2Pq5gmFYw1MQ" base_Operation="_kuPCME2REe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:blankNode xmi:id="_X-uFcK7zEe2D9pavmCI82g" base_Class="_XhC24E2LEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_m-rmoL02Ee27q7bl1fmSsA"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_YyZ4sL03Ee27q7bl1fmSsA"/>
 </xmi:XMI>
