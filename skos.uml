@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_3OuvQK70Ee2D9pavmCI82g">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA">
   <uml:Package xmi:id="_hRGbgE1mEe2Pq5gmFYw1MQ" name="org.datafoodconsortium.connector.skos" URI="http://static.datafoodconsortium.org/uml/connector/skos.uml">
     <packagedElement xmi:type="uml:Interface" xmi:id="_r06YgE1mEe2Pq5gmFYw1MQ" name="ISKOSConcept">
       <elementImport xmi:id="_l2v-4E2QEe2Pq5gmFYw1MQ" importedElement="_vNmyoE1mEe2Pq5gmFYw1MQ"/>
@@ -91,7 +91,7 @@
     </packagedElement>
     <profileApplication xmi:id="_geXD4K72Ee2D9pavmCI82g">
       <eAnnotations xmi:id="_geXD4a72Ee2D9pavmCI82g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_3OuvQK70Ee2D9pavmCI82g"/>
+        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA"/>
       </eAnnotations>
       <appliedProfile href="connector.profile.uml#_xSn38NtjEeyHhf8rtkVHoQ"/>
     </profileApplication>
@@ -116,7 +116,13 @@
   <datafoodconsortium_connector:semantic xmi:id="_gNz9QU2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#prefLabel" base_Element="_GLqC8E2MEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:semantic xmi:id="_ySGpIE2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#Concept" base_Element="_XhC24E2LEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:constructor xmi:id="_mzdpUE2REe2Pq5gmFYw1MQ" base_Operation="_kuPCME2REe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:blankNode xmi:id="_X-uFcK7zEe2D9pavmCI82g" base_Class="_XhC24E2LEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:initializerParent xmi:id="_m-rmoL02Ee27q7bl1fmSsA"/>
   <datafoodconsortium_connector:initializerParent xmi:id="_YyZ4sL03Ee27q7bl1fmSsA"/>
+  <datafoodconsortium_connector:adder xmi:id="_aNNZ8MiUEe2tet82apP7RQ" base_Operation="_nuHFwE1nEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:adder xmi:id="_a5_AYMiUEe2tet82apP7RQ" base_Operation="_pJA9gE1nEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:adder xmi:id="_bmReoMiUEe2tet82apP7RQ" base_Operation="_oqICEE1nEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:adder xmi:id="_cRSxkMiUEe2tet82apP7RQ" base_Operation="_pgfpYE1nEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_85DJ4MrkEe24_rxb3O_v6Q" base_Element="_r06YgE1mEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_xlmpQMrwEe24_rxb3O_v6Q" base_Element="_vNmyoE1mEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_yhS1cMrwEe24_rxb3O_v6Q" base_Element="_vdmWcE1mEe2Pq5gmFYw1MQ"/>
 </xmi:XMI>

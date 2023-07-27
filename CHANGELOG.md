@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `setOfferedItem`
     - `setCustomerCategory`
 - Set missing getter and setter for the `description` property of `CustomerCategory`.
+- Restore adders.
+- `Offer`:
+    - change the semantic property `dfc-b:price` to `dfc-b:hasPrice`.
 
 ### Added
 
@@ -31,7 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `Enterprise`
     - `Person`
 - `Enterprise`
-    - add missing constructor parameters
+    - add missing constructor parameters.
+    - add `catalogs` property.
+    - add `technicalProducts` property.
 - constructor parameters on `DefinedProduct`.
 - `Offerable:setOfferedProduct`
 - `Offer`
@@ -56,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - add the `blankNode` stereotype
 - `IPrice`:
     - add `setValue`, `setVatRate` and `setUnit`
+    - add the `BlankNode` stereotype
 - `Price`:
     - add constructor parameters
     - add setter in properties
@@ -64,6 +70,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - add `removeFromCatalog`
 - `Browsable`:
     - add `removeItem`
+- `IAllergenCharacteristic`
+    - add the `BlankNode` stereotype
+- `INutrientCharacteristic`
+    - add the `BlankNode` stereotype
+- `IPhysicalCharacteristic`
+    - add the `BlankNode` stereotype
 - `ICatalog`
 - `ISaleSession`
     - add `getQuantity`
@@ -82,6 +94,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - add properties
 - `Payable`
     - add `setPrice`
+- connector.profile.uml:
+    - the `blankNode` stereotype can be applied on Interface;
+- `ISuppliedProduct`
+- `ITechnicalProduct`
+- `IAgent`
 
 ### Changed
 
@@ -109,6 +126,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - change `getMaintainers` return type to `IEnterprise`
     - renamed `getListedItems` to `getItems`
 - Delete classes: `ProductType`, `Unit`, `GeographicalOrigin`, `Certification`, `NatureOrigin`, `PartOrigin`, `CharacteristicDimension`, `AllergenDimension`.
+- `SKOSConcept`:
+    - not a BlankNode anymore.
 
 ## [1.0.0] - 2023-02-06
 

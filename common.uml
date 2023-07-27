@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_3OuvQK70Ee2D9pavmCI82g">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA">
   <uml:Package xmi:id="_tbxIoODpEey8JZcrriCc9A" name="org.datafoodconsortium.connector.common">
     <packagedElement xmi:type="uml:Interface" xmi:id="_ORnSwNxUEeyr_asPBQgiSQ" name="Exhibitable">
       <ownedOperation xmi:id="_ReL8cNxUEeyr_asPBQgiSQ" name="getImage">
@@ -164,6 +164,10 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_CPEsAMroEe24_rxb3O_v6Q" name="IAddress">
+      <elementImport xmi:id="_GTMowMroEe24_rxb3O_v6Q" importedElement="_osxSANxLEeyr_asPBQgiSQ"/>
+      <generalization xmi:id="_JdGY8MroEe24_rxb3O_v6Q" general="_osxSANxLEeyr_asPBQgiSQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_NcvbsFOyEe25FchyjWczOg" name="IProductType">
       <elementImport xmi:id="_R3pgwFOyEe25FchyjWczOg">
         <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
@@ -171,6 +175,10 @@
       <generalization xmi:id="_V_guAFOyEe25FchyjWczOg">
         <general xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_9mm50MrsEe24_rxb3O_v6Q" name="IQuantity">
+      <elementImport xmi:id="_F0UiIMrtEe24_rxb3O_v6Q" importedElement="_S8hGMNxVEeyr_asPBQgiSQ"/>
+      <generalization xmi:id="_IkhY4MrtEe24_rxb3O_v6Q" general="_S8hGMNxVEeyr_asPBQgiSQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_hyQD8E1qEe2Pq5gmFYw1MQ" name="IUnit">
       <elementImport xmi:id="_lNSAYE1qEe2Pq5gmFYw1MQ">
@@ -185,6 +193,14 @@
         <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </elementImport>
       <generalization xmi:id="_Z-rAgk73Ee2TpoYuSsmzTA">
+        <general xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_S9eCUMrwEe24_rxb3O_v6Q" name="IClaim">
+      <elementImport xmi:id="_S9eCUcrwEe24_rxb3O_v6Q">
+        <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
+      </elementImport>
+      <generalization xmi:id="_S9eCUsrwEe24_rxb3O_v6Q">
         <general xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </generalization>
     </packagedElement>
@@ -249,7 +265,7 @@
       <generalization xmi:id="_fXTtMlOZEe25FchyjWczOg" general="_2NwzUFKjEe2mkogbA-51Cg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_i5ussNuYEeyR38y4P6cy-Q" name="Address">
-      <elementImport xmi:id="_CZFSsNudEeyR38y4P6cy-Q" importedElement="_osxSANxLEeyr_asPBQgiSQ"/>
+      <elementImport xmi:id="_CZFSsNudEeyR38y4P6cy-Q" importedElement="_CPEsAMroEe24_rxb3O_v6Q"/>
       <ownedAttribute xmi:id="_R1_FkNudEeyR38y4P6cy-Q" name="street">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -262,9 +278,10 @@
       <ownedAttribute xmi:id="_tgfg8NuhEeyR38y4P6cy-Q" name="country">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <interfaceRealization xmi:id="_JhSEcNudEeyR38y4P6cy-Q" client="_i5ussNuYEeyR38y4P6cy-Q" contract="_osxSANxLEeyr_asPBQgiSQ">
+      <interfaceRealization xmi:id="_JhSEcNudEeyR38y4P6cy-Q" client="_i5ussNuYEeyR38y4P6cy-Q" contract="_CPEsAMroEe24_rxb3O_v6Q">
         <supplier xmi:type="uml:Interface" href="contract.uml#_osxSANxLEeyr_asPBQgiSQ"/>
         <supplier xmi:type="uml:Interface" href="#_osxSANxLEeyr_asPBQgiSQ"/>
+        <supplier xmi:type="uml:Interface" href="#_CPEsAMroEe24_rxb3O_v6Q"/>
       </interfaceRealization>
       <ownedOperation xmi:id="_3W-kANxIEeyr_asPBQgiSQ" name="Address">
         <ownedParameter xmi:id="_6_pT0NxIEeyr_asPBQgiSQ" name="street">
@@ -282,13 +299,13 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_EkvOAOmrEeyc2oibQ8qwAA" name="QuantitativeValue">
-      <elementImport xmi:id="_uGIdgOmrEeyc2oibQ8qwAA" importedElement="_S8hGMNxVEeyr_asPBQgiSQ"/>
+      <elementImport xmi:id="_uGIdgOmrEeyc2oibQ8qwAA" importedElement="_9mm50MrsEe24_rxb3O_v6Q"/>
       <elementImport xmi:id="_htxFAK7wEe2D9pavmCI82g" importedElement="_hyQD8E1qEe2Pq5gmFYw1MQ"/>
       <ownedAttribute xmi:id="_yh-9wOmrEeyc2oibQ8qwAA" name="unit" type="_hyQD8E1qEe2Pq5gmFYw1MQ"/>
       <ownedAttribute xmi:id="_z5QSsOmrEeyc2oibQ8qwAA" name="value">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
       </ownedAttribute>
-      <interfaceRealization xmi:id="_wm3U4OmrEeyc2oibQ8qwAA" client="_EkvOAOmrEeyc2oibQ8qwAA" supplier="_S8hGMNxVEeyr_asPBQgiSQ" contract="_S8hGMNxVEeyr_asPBQgiSQ"/>
+      <interfaceRealization xmi:id="_wm3U4OmrEeyc2oibQ8qwAA" client="_EkvOAOmrEeyc2oibQ8qwAA" supplier="_S8hGMNxVEeyr_asPBQgiSQ _9mm50MrsEe24_rxb3O_v6Q" contract="_9mm50MrsEe24_rxb3O_v6Q"/>
       <ownedOperation xmi:id="_zU6koOmtEeyc2oibQ8qwAA" name="QuantitativeValue">
         <ownedParameter xmi:id="_2VZ6IOmtEeyc2oibQ8qwAA" name="unit" type="_hyQD8E1qEe2Pq5gmFYw1MQ"/>
         <ownedParameter xmi:id="_2hZHsOmtEeyc2oibQ8qwAA" name="value">
@@ -387,7 +404,7 @@
     </packagedElement>
     <profileApplication xmi:id="_vcEZ8OjgEey9aasgGgoaNw">
       <eAnnotations xmi:id="_vcIEUOjgEey9aasgGgoaNw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_3OuvQK70Ee2D9pavmCI82g"/>
+        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA"/>
       </eAnnotations>
       <appliedProfile href="connector.profile.uml#_xSn38NtjEeyHhf8rtkVHoQ"/>
     </profileApplication>
@@ -486,4 +503,11 @@
   <datafoodconsortium_connector:getter xmi:id="_95FnkL7QEe2g9M79Y7jp8Q" base_Operation="_OvKkEOZdEeybgd1DwlK4YQ"/>
   <datafoodconsortium_connector:setter xmi:id="_-phmAL7QEe2g9M79Y7jp8Q" base_Operation="_rJxBsL7QEe2g9M79Y7jp8Q"/>
   <datafoodconsortium_connector:setter xmi:id="__pvF0L7QEe2g9M79Y7jp8Q" base_Operation="_soPK0L7QEe2g9M79Y7jp8Q"/>
+  <datafoodconsortium_connector:blankNode xmi:id="_Bv4P8MZFEe2oSMzXUO9qSA" base_Interface="_PWWDoFOcEe25FchyjWczOg"/>
+  <datafoodconsortium_connector:blankNode xmi:id="_DDlTgMZFEe2oSMzXUO9qSA" base_Interface="__JfEYFOkEe25FchyjWczOg"/>
+  <datafoodconsortium_connector:blankNode xmi:id="_D5tDMMZFEe2oSMzXUO9qSA" base_Interface="_BCkF4FOlEe25FchyjWczOg"/>
+  <datafoodconsortium_connector:semantic xmi:id="_lq0vwMrkEe24_rxb3O_v6Q" base_Element="_1qP5cE8oEe2TpoYuSsmzTA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_PAWmIMroEe24_rxb3O_v6Q" base_Element="_CPEsAMroEe24_rxb3O_v6Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="_LJgeIMrtEe24_rxb3O_v6Q" base_Element="_9mm50MrsEe24_rxb3O_v6Q"/>
+  <datafoodconsortium_connector:blankNode xmi:id="_LJgeIcrtEe24_rxb3O_v6Q" base_Interface="_9mm50MrsEe24_rxb3O_v6Q"/>
 </xmi:XMI>
