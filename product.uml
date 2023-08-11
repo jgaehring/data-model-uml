@@ -576,6 +576,86 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3jt7cDMEEe6xB71inyLaQw" name="TechnicalProduct">
+      <elementImport xmi:id="_e1BXoDMFEe6xB71inyLaQw" importedElement="_zm0rgMluEe2sgKS3gBN9sQ"/>
+      <elementImport xmi:id="_We1ocDMIEe6xB71inyLaQw" importedElement="_ZAMZINwDEeyr_asPBQgiSQ"/>
+      <generalization xmi:id="_qWehQDMIEe6xB71inyLaQw" general="_ZAMZINwDEeyr_asPBQgiSQ"/>
+      <interfaceRealization xmi:id="_l-sJADMFEe6xB71inyLaQw" client="_3jt7cDMEEe6xB71inyLaQw" supplier="_zm0rgMluEe2sgKS3gBN9sQ" contract="_zm0rgMluEe2sgKS3gBN9sQ"/>
+      <ownedOperation xmi:id="_akQlsDMIEe6xB71inyLaQw" name="TechnicalProduct">
+        <ownedParameter xmi:id="_akQlsTMIEe6xB71inyLaQw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlsjMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlszMIEe6xB71inyLaQw" name="description">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQltDMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQltTMIEe6xB71inyLaQw" name="productType">
+          <type xmi:type="uml:Interface" href="common.uml#_NcvbsFOyEe25FchyjWczOg"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQltjMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQltzMIEe6xB71inyLaQw" name="quantity">
+          <type xmi:type="uml:Interface" href="common.uml#_9mm50MrsEe24_rxb3O_v6Q"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQluDMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQluTMIEe6xB71inyLaQw" name="alcoholPercentage">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlujMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQluzMIEe6xB71inyLaQw" name="lifetime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlvDMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlvTMIEe6xB71inyLaQw" name="claims">
+          <type xmi:type="uml:Interface" href="common.uml#_S9eCUMrwEe24_rxb3O_v6Q"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlvjMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQlvzMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlwDMIEe6xB71inyLaQw" name="usageOrStorageConditions">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlwTMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlwjMIEe6xB71inyLaQw" name="allergenCharacteristics">
+          <type xmi:type="uml:Interface" href="common.uml#_PWWDoFOcEe25FchyjWczOg"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlwzMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQlxDMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlxTMIEe6xB71inyLaQw" name="nutrientCharacteristics">
+          <type xmi:type="uml:Interface" href="common.uml#__JfEYFOkEe25FchyjWczOg"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlxjMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQlxzMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlyDMIEe6xB71inyLaQw" name="physicalCharacteristics">
+          <type xmi:type="uml:Interface" href="common.uml#_BCkF4FOlEe25FchyjWczOg"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlyTMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQlyjMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlyzMIEe6xB71inyLaQw" name="geographicalOrigin">
+          <type xmi:type="uml:Interface" href="common.uml#_Z-rAgE73Ee2TpoYuSsmzTA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlzDMIEe6xB71inyLaQw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQlzTMIEe6xB71inyLaQw" name="catalogItems">
+          <type xmi:type="uml:Interface" href="sale.uml#_pcawwAaREe26esJmMoAMaw"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQlzjMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQlzzMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQl0DMIEe6xB71inyLaQw" name="certifications">
+          <type xmi:type="uml:Interface" href="common.uml#_yovGgE73Ee2TpoYuSsmzTA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQl0TMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQl0jMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQl0zMIEe6xB71inyLaQw" name="natureOrigin">
+          <type xmi:type="uml:Interface" href="common.uml#_9gHfwE73Ee2TpoYuSsmzTA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQl1DMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQl1TMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_akQl1jMIEe6xB71inyLaQw" name="partOrigin">
+          <type xmi:type="uml:Interface" href="common.uml#_Ac72ME74Ee2TpoYuSsmzTA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_akQl1zMIEe6xB71inyLaQw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_akQl2DMIEe6xB71inyLaQw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <profileApplication xmi:id="_ZaCIsK76Ee27bvIjdr5biQ">
       <eAnnotations xmi:id="_ZaEk8K76Ee27bvIjdr5biQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA"/>
@@ -600,33 +680,33 @@
     <getter href="common.uml#_tMdaUNxUEeyr_asPBQgiSQ"/>
     <setter href="common.uml#_ZcvkYFUnEe2_KYs77o2hVQ"/>
   </datafoodconsortium_connector:property>
-  <datafoodconsortium_connector:semantic xmi:id="_PpSHkeD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#description" base_Element="_ULIXkOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_PpSHkeD6Eey8JZcrriCc9A" map="dfc-b:description" base_Element="_ULIXkOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:property xmi:id="_RijWUOD6Eey8JZcrriCc9A" base_Property="_Rc4BkOD5Eey8JZcrriCc9A" getter="_EKMr8NxWEeyr_asPBQgiSQ" setter="_9w4e8FdjEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_Rij9YOD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#alcoholPercentage" base_Element="_Rc4BkOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_Rij9YOD6Eey8JZcrriCc9A" map="dfc-b:alcoholPercentage" base_Element="_Rc4BkOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:property xmi:id="_SnCSIOD6Eey8JZcrriCc9A" base_Property="_SmeG4OD5Eey8JZcrriCc9A" getter="_GBdIgNxWEeyr_asPBQgiSQ" setter="_JQkOUFdkEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_SnCSIeD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#lifetime" base_Element="_SmeG4OD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_SnCSIeD6Eey8JZcrriCc9A" map="dfc-b:lifetime" base_Element="_SmeG4OD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_XV6cEOD6Eey8JZcrriCc9A" base_Property="_SrJykOD5Eey8JZcrriCc9A" getter="_MDp7gNxWEeyr_asPBQgiSQ" adder="_vKCOYNxhEeyr_asPBQgiSQ" remover="_I3OkcFdoEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_XV7DIOD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasClaim" base_Element="_SrJykOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_XV7DIOD6Eey8JZcrriCc9A" map="dfc-b:hasClaim" base_Element="_SrJykOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:property xmi:id="_YLmt8OD6Eey8JZcrriCc9A" base_Property="_TKn80OD5Eey8JZcrriCc9A" getter="_TBiToNxWEeyr_asPBQgiSQ" setter="_RI1LEFdkEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_YLmt8eD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#usageOrStorageCondition" base_Element="_TKn80OD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_YLmt8eD6Eey8JZcrriCc9A" map="dfc-b:usageOrStorageCondition" base_Element="_TKn80OD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_ZUb-QOD6Eey8JZcrriCc9A" base_Property="_TPvGUOD5Eey8JZcrriCc9A" getter="_aq-xQNxWEeyr_asPBQgiSQ" adder="_xPiiUNxhEeyr_asPBQgiSQ" remover="_mxkGsFdnEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_ZUb-QeD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasAllergenCharacteristic" base_Element="_TPvGUOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_ZUb-QeD6Eey8JZcrriCc9A" map="dfc-b:hasAllergenCharacteristic" base_Element="_TPvGUOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_aV-TwOD6Eey8JZcrriCc9A" base_Property="_TURoEOD5Eey8JZcrriCc9A" getter="_dp9q4NxWEeyr_asPBQgiSQ" adder="_2SKusNxhEeyr_asPBQgiSQ" remover="_2BdYUFdnEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_aV-TweD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasNutrientCharacteristic" base_Element="_TURoEOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_aV-TweD6Eey8JZcrriCc9A" map="dfc-b:hasNutrientCharacteristic" base_Element="_TURoEOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_bVTCwOD6Eey8JZcrriCc9A" base_Property="_Twx94OD5Eey8JZcrriCc9A" getter="_iNHF8NxWEeyr_asPBQgiSQ" adder="_9erYsNxhEeyr_asPBQgiSQ" remover="_2BdYUldnEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_bVTCweD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasPhysicalCharacteristic" base_Element="_Twx94OD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_bVTCweD6Eey8JZcrriCc9A" map="dfc-b:hasPhysicalCharacteristic" base_Element="_Twx94OD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:property xmi:id="_cZbZQOD6Eey8JZcrriCc9A" base_Property="_T3GBQOD5Eey8JZcrriCc9A" getter="_mB1UwNxWEeyr_asPBQgiSQ" setter="__kF68E79Ee2TpoYuSsmzTA"/>
-  <datafoodconsortium_connector:semantic xmi:id="_cZcAUOD6Eey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasGeographicalOrigin" base_Element="_T3GBQOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_cZcAUOD6Eey8JZcrriCc9A" map="dfc-b:hasGeographicalOrigin" base_Element="_T3GBQOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:constructor xmi:id="_GpE14OD7Eey8JZcrriCc9A" base_Operation="_EjUDQOD7Eey8JZcrriCc9A"/>
-  <datafoodconsortium_connector:semantic xmi:id="_ODPMcOEeEey8JZcrriCc9A" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#name" base_Element="_T97pEOD5Eey8JZcrriCc9A"/>
-  <datafoodconsortium_connector:semantic xmi:id="_rqPC4OjnEey9aasgGgoaNw" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#SuppliedProduct" base_Element="_tuO3AOD8Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_ODPMcOEeEey8JZcrriCc9A" map="dfc-b:name" base_Element="_T97pEOD5Eey8JZcrriCc9A"/>
+  <datafoodconsortium_connector:semantic xmi:id="_rqPC4OjnEey9aasgGgoaNw" map="dfc-b:SuppliedProduct" base_Element="_tuO3AOD8Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:external xmi:id="_vfusUOlsEeyc2oibQ8qwAA"/>
   <datafoodconsortium_connector:external xmi:id="_JX3LUOmWEeyc2oibQ8qwAA"/>
-  <datafoodconsortium_connector:semantic xmi:id="_KJyXgOmWEeyc2oibQ8qwAA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#AllergenCharacteristic"/>
-  <datafoodconsortium_connector:semantic xmi:id="_zlHgoOmpEeyc2oibQ8qwAA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#NutrientCharacteristic"/>
+  <datafoodconsortium_connector:semantic xmi:id="_KJyXgOmWEeyc2oibQ8qwAA" map="dfc-b:AllergenCharacteristic"/>
+  <datafoodconsortium_connector:semantic xmi:id="_zlHgoOmpEeyc2oibQ8qwAA" map="dfc-b:NutrientCharacteristic"/>
   <datafoodconsortium_connector:external xmi:id="_0qgbYOmpEeyc2oibQ8qwAA"/>
   <datafoodconsortium_connector:external xmi:id="_8klWAOmpEeyc2oibQ8qwAA"/>
-  <datafoodconsortium_connector:semantic xmi:id="_9drhMOmpEeyc2oibQ8qwAA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#PhysicalCharacteristic"/>
+  <datafoodconsortium_connector:semantic xmi:id="_9drhMOmpEeyc2oibQ8qwAA" map="dfc-b:PhysicalCharacteristic"/>
   <datafoodconsortium_connector:initializer xmi:id="_FqJMYOtXEey6f7rgFRym3Q" property="_T97pEOD5Eey8JZcrriCc9A" base_Parameter="_B9TuQOtXEey6f7rgFRym3Q"/>
   <datafoodconsortium_connector:initializer xmi:id="_GZj3IOtXEey6f7rgFRym3Q" property="_ULIXkOD5Eey8JZcrriCc9A" base_Parameter="_CJnE4OtXEey6f7rgFRym3Q"/>
   <datafoodconsortium_connector:constructor xmi:id="_WWJ2sOtXEey6f7rgFRym3Q"/>
@@ -635,26 +715,26 @@
   <datafoodconsortium_connector:initializerParent xmi:id="_cC5XEOtXEey6f7rgFRym3Q" property="_ULIXkOD5Eey8JZcrriCc9A"/>
   <datafoodconsortium_connector:getter xmi:id="_gGs18PYnEeyhHaYS44zQ9Q" base_Operation="_ScTigPYnEeyhHaYS44zQ9Q"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_1Xdd0PYnEeyhHaYS44zQ9Q" base_Property="_Yh3A8PYmEeyhHaYS44zQ9Q" getter="_ScTigPYnEeyhHaYS44zQ9Q" adder="_aCB9wPYnEeyhHaYS44zQ9Q"/>
-  <datafoodconsortium_connector:semantic xmi:id="_1Xdd0fYnEeyhHaYS44zQ9Q" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#referencedBy" base_Element="_Yh3A8PYmEeyhHaYS44zQ9Q"/>
-  <datafoodconsortium_connector:semantic xmi:id="__BTHUEsVEe22e8Z5wgMBmQ" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#DefinedProduct" base_Element="_ZAMZINwDEeyr_asPBQgiSQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_1Xdd0fYnEeyhHaYS44zQ9Q" map="dfc-b:referencedBy" base_Element="_Yh3A8PYmEeyhHaYS44zQ9Q"/>
+  <datafoodconsortium_connector:semantic xmi:id="__BTHUEsVEe22e8Z5wgMBmQ" map="dfc-b:DefinedProduct" base_Element="_ZAMZINwDEeyr_asPBQgiSQ"/>
   <datafoodconsortium_connector:getter xmi:id="_4opIoEvEEe2LdZJdl4TCHA" base_Operation="_bZAlsEvEEe2LdZJdl4TCHA"/>
   <datafoodconsortium_connector:property xmi:id="_XYlnwEvFEe2LdZJdl4TCHA" base_Property="_9yCEUEvEEe2LdZJdl4TCHA" getter="_bZAlsEvEEe2LdZJdl4TCHA" setter="_iTeoAEvFEe2LdZJdl4TCHA"/>
-  <datafoodconsortium_connector:semantic xmi:id="_XYmO0EvFEe2LdZJdl4TCHA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasQuantity" base_Element="_9yCEUEvEEe2LdZJdl4TCHA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_XYmO0EvFEe2LdZJdl4TCHA" map="dfc-b:hasQuantity" base_Element="_9yCEUEvEEe2LdZJdl4TCHA"/>
   <datafoodconsortium_connector:setter xmi:id="_nNcAkEvFEe2LdZJdl4TCHA" base_Operation="_iTeoAEvFEe2LdZJdl4TCHA"/>
   <datafoodconsortium_connector:getter xmi:id="_6ZPmsE79Ee2TpoYuSsmzTA" base_Operation="_vmWr4E79Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:getter xmi:id="_7MBHcE79Ee2TpoYuSsmzTA" base_Operation="_wCXScE79Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:setter xmi:id="_RXu7sE7-Ee2TpoYuSsmzTA" base_Operation="__kF68E79Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:getter xmi:id="_qWWVYE7-Ee2TpoYuSsmzTA" base_Operation="_iWkbYE7-Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_wQVyIE7_Ee2TpoYuSsmzTA" base_Property="_k9gL8E7_Ee2TpoYuSsmzTA" getter="_iWkbYE7-Ee2TpoYuSsmzTA" adder="_r2Fp0E7-Ee2TpoYuSsmzTA" remover="_lyBf0FdoEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_wQVyIU7_Ee2TpoYuSsmzTA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasCertification" base_Element="_k9gL8E7_Ee2TpoYuSsmzTA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_wQVyIU7_Ee2TpoYuSsmzTA" map="dfc-b:hasCertification" base_Element="_k9gL8E7_Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_SHrjME8EEe2TpoYuSsmzTA" base_Property="_D6x_oE8EEe2TpoYuSsmzTA" getter="_vmWr4E79Ee2TpoYuSsmzTA" adder="_HISFIE7-Ee2TpoYuSsmzTA" remover="_2Bd_YFdnEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_SHsKQE8EEe2TpoYuSsmzTA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasNatureOrigin" base_Element="_D6x_oE8EEe2TpoYuSsmzTA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_SHsKQE8EEe2TpoYuSsmzTA" map="dfc-b:hasNatureOrigin" base_Element="_D6x_oE8EEe2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_TRwwsE8EEe2TpoYuSsmzTA" base_Property="_FAjU4E8EEe2TpoYuSsmzTA" getter="_wCXScE79Ee2TpoYuSsmzTA" adder="_H7BJoE7-Ee2TpoYuSsmzTA" remover="_2Bd_YldnEe2lYreNEuYUhg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_TRwwsU8EEe2TpoYuSsmzTA" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasPartOrigin" base_Element="_FAjU4E8EEe2TpoYuSsmzTA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_TRwwsU8EEe2TpoYuSsmzTA" map="dfc-b:hasPartOrigin" base_Element="_FAjU4E8EEe2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:getter xmi:id="_3HTOQFOyEe25FchyjWczOg" base_Operation="_qxJw8FOyEe25FchyjWczOg"/>
   <datafoodconsortium_connector:setter xmi:id="_4T8AgFOyEe25FchyjWczOg" base_Operation="_zmcWoFOyEe25FchyjWczOg"/>
   <datafoodconsortium_connector:property xmi:id="_DKodQFOzEe25FchyjWczOg" base_Property="_7TndsFOyEe25FchyjWczOg" getter="_qxJw8FOyEe25FchyjWczOg" setter="_zmcWoFOyEe25FchyjWczOg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_DKpEUFOzEe25FchyjWczOg" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#hasType" base_Element="_7TndsFOyEe25FchyjWczOg"/>
+  <datafoodconsortium_connector:semantic xmi:id="_DKpEUFOzEe25FchyjWczOg" map="dfc-b:hasType" base_Element="_7TndsFOyEe25FchyjWczOg"/>
   <datafoodconsortium_connector:setter xmi:id="_FlHQQFdkEe2lYreNEuYUhg" base_Operation="_9w4e8FdjEe2lYreNEuYUhg"/>
   <datafoodconsortium_connector:setter xmi:id="_PScRMFdkEe2lYreNEuYUhg" base_Operation="_JQkOUFdkEe2lYreNEuYUhg"/>
   <datafoodconsortium_connector:setter xmi:id="_RI1yIFdkEe2lYreNEuYUhg" base_Operation="_RI1LEFdkEe2lYreNEuYUhg"/>
@@ -668,7 +748,7 @@
   <datafoodconsortium_connector:getter xmi:id="_Q4WrgKb3Ee2q8cYuTD88Gg" base_Operation="_GuoCcKb3Ee2q8cYuTD88Gg"/>
   <datafoodconsortium_connector:setter xmi:id="_RyO50Kb3Ee2q8cYuTD88Gg" base_Operation="_MPgREKb3Ee2q8cYuTD88Gg"/>
   <datafoodconsortium_connector:property xmi:id="_J2adUKb4Ee2q8cYuTD88Gg" base_Property="_sEaCkKb2Ee2q8cYuTD88Gg" getter="_GuoCcKb3Ee2q8cYuTD88Gg" setter="_MPgREKb3Ee2q8cYuTD88Gg"/>
-  <datafoodconsortium_connector:semantic xmi:id="_J2adUab4Ee2q8cYuTD88Gg" map="http://static.datafoodconsortium.org/ontologies/DFC_BusinessOntology.owl#totalTheoreticalStock" base_Element="_sEaCkKb2Ee2q8cYuTD88Gg"/>
+  <datafoodconsortium_connector:semantic xmi:id="_J2adUab4Ee2q8cYuTD88Gg" map="dfc-b:totalTheoreticalStock" base_Element="_sEaCkKb2Ee2q8cYuTD88Gg"/>
   <datafoodconsortium_connector:initializer xmi:id="_iTp_kLggEe2JkOBUoGn8qA" property="_7TndsFOyEe25FchyjWczOg" base_Parameter="_lCDU8LgfEe2JkOBUoGn8qA"/>
   <datafoodconsortium_connector:initializer xmi:id="_jImDgLggEe2JkOBUoGn8qA" property="_9yCEUEvEEe2LdZJdl4TCHA" base_Parameter="_rWXysLgfEe2JkOBUoGn8qA"/>
   <datafoodconsortium_connector:initializer xmi:id="_j5R5kLggEe2JkOBUoGn8qA" property="_Rc4BkOD5Eey8JZcrriCc9A" base_Parameter="_ri7oALgfEe2JkOBUoGn8qA"/>
@@ -710,4 +790,24 @@
   <datafoodconsortium_connector:adder xmi:id="_DGmqwMiUEe2tet82apP7RQ" base_Operation="_r2Fp0E7-Ee2TpoYuSsmzTA"/>
   <datafoodconsortium_connector:adder xmi:id="_GFKGkMiUEe2tet82apP7RQ" base_Operation="_aCB9wPYnEeyhHaYS44zQ9Q"/>
   <datafoodconsortium_connector:semantic xmi:id="_tUsrMMrkEe24_rxb3O_v6Q" base_Element="_OtRegAaaEe26esJmMoAMaw"/>
+  <datafoodconsortium_connector:semantic xmi:id="_v42FADMFEe6xB71inyLaQw" map="dfc-b:TechnicalProduct" base_Element="_3jt7cDMEEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:constructor xmi:id="_eI-7kDMGEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:constructor xmi:id="_akQl2zMIEe6xB71inyLaQw" base_Operation="_akQlsDMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl3DMIEe6xB71inyLaQw" property="_T97pEOD5Eey8JZcrriCc9A" base_Parameter="_akQlsTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl3TMIEe6xB71inyLaQw" property="_ULIXkOD5Eey8JZcrriCc9A" base_Parameter="_akQlszMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl3jMIEe6xB71inyLaQw" property="_7TndsFOyEe25FchyjWczOg" base_Parameter="_akQltTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl3zMIEe6xB71inyLaQw" property="_9yCEUEvEEe2LdZJdl4TCHA" base_Parameter="_akQltzMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl4DMIEe6xB71inyLaQw" property="_Rc4BkOD5Eey8JZcrriCc9A" base_Parameter="_akQluTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl4TMIEe6xB71inyLaQw" property="_SmeG4OD5Eey8JZcrriCc9A" base_Parameter="_akQluzMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl4jMIEe6xB71inyLaQw" property="_SrJykOD5Eey8JZcrriCc9A" base_Parameter="_akQlvTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl4zMIEe6xB71inyLaQw" property="_TKn80OD5Eey8JZcrriCc9A" base_Parameter="_akQlwDMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akQl5DMIEe6xB71inyLaQw" property="_TPvGUOD5Eey8JZcrriCc9A" base_Parameter="_akQlwjMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMwDMIEe6xB71inyLaQw" property="_TURoEOD5Eey8JZcrriCc9A" base_Parameter="_akQlxTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMwTMIEe6xB71inyLaQw" property="_Twx94OD5Eey8JZcrriCc9A" base_Parameter="_akQlyDMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMwjMIEe6xB71inyLaQw" property="_T3GBQOD5Eey8JZcrriCc9A" base_Parameter="_akQlyzMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMwzMIEe6xB71inyLaQw" property="_Yh3A8PYmEeyhHaYS44zQ9Q" base_Parameter="_akQlzTMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMxDMIEe6xB71inyLaQw" property="_k9gL8E7_Ee2TpoYuSsmzTA" base_Parameter="_akQl0DMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMxTMIEe6xB71inyLaQw" property="_D6x_oE8EEe2TpoYuSsmzTA" base_Parameter="_akQl0zMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializerParent xmi:id="_akRMxjMIEe6xB71inyLaQw" property="_FAjU4E8EEe2TpoYuSsmzTA" base_Parameter="_akQl1jMIEe6xB71inyLaQw"/>
+  <datafoodconsortium_connector:initializer xmi:id="_akRMxzMIEe6xB71inyLaQw" property="_sEaCkKb2Ee2q8cYuTD88Gg"/>
 </xmi:XMI>

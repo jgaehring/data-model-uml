@@ -29,6 +29,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add class for taxons:
+	- `Unit` class.
+	- `ProductType` class.
+	- `GeographicalOrigin` class.
+	- `CharacteristicDimension` class.
+	- `Claim` class.
+	- `Certification` class.
+	- `NatureOrigin` class.
+	- `PartOrigin` class.
+	- `Quantity` class.
 - Add `localizations` parameter in the constructor of:
     - `Agent`
     - `Enterprise`
@@ -72,10 +82,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - add `removeItem`
 - `IAllergenCharacteristic`
     - add the `BlankNode` stereotype
+- `AllergenDimension` class
 - `INutrientCharacteristic`
     - add the `BlankNode` stereotype
+- `NutrientDimension` class
 - `IPhysicalCharacteristic`
     - add the `BlankNode` stereotype
+- `PhysicalDimension` class    
 - `ICatalog`
 - `ISaleSession`
     - add `getQuantity`
@@ -98,10 +111,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - the `blankNode` stereotype can be applied on Interface;
 - `ISuppliedProduct`
 - `ITechnicalProduct`
+- `TechnicalProduct`
 - `IAgent`
 
 ### Changed
 
+- Replace the URL in the map property attribute by a prefix + a name.
 - Remove `JsonLdSerializer`.
 - `Enterprise`:
     - remove `Nameable`
