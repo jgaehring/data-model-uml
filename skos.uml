@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datafoodconsortium_connector="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml connector.profile.uml#_q9P7ADhmEe6Bec_m8yNqyw">
   <uml:Package xmi:id="_hRGbgE1mEe2Pq5gmFYw1MQ" name="org.datafoodconsortium.connector.skos" URI="http://static.datafoodconsortium.org/uml/connector/skos.uml">
     <packagedElement xmi:type="uml:Interface" xmi:id="_r06YgE1mEe2Pq5gmFYw1MQ" name="ISKOSConcept">
       <elementImport xmi:id="_l2v-4E2QEe2Pq5gmFYw1MQ" importedElement="_vNmyoE1mEe2Pq5gmFYw1MQ"/>
@@ -91,7 +91,13 @@
     </packagedElement>
     <profileApplication xmi:id="_geXD4K72Ee2D9pavmCI82g">
       <eAnnotations xmi:id="_geXD4a72Ee2D9pavmCI82g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_RFlEEMZEEe2oSMzXUO9qSA"/>
+        <references xmi:type="ecore:EPackage" href="connector.profile.uml#_q9P7ADhmEe6Bec_m8yNqyw"/>
+      </eAnnotations>
+      <appliedProfile href="connector.profile.uml#_xSn38NtjEeyHhf8rtkVHoQ"/>
+    </profileApplication>
+    <profileApplication xmi:id="_5bMLQDhmEe6Bec_m8yNqyw">
+      <eAnnotations xmi:id="_5bMLQThmEe6Bec_m8yNqyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://static.datafoodconsortium.org/uml/connector/connector.profile.uml#_TqQvceiqEey9aasgGgoaNw"/>
       </eAnnotations>
       <appliedProfile href="connector.profile.uml#_xSn38NtjEeyHhf8rtkVHoQ"/>
     </profileApplication>

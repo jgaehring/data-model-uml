@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_OsfYwOdIEeyey8O34-FiDg" name="org.datafoodconsortium.connector" URI="http://static.datafoodconsortium.org/uml/connector/connector.uml">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_OsfYwOdIEeyey8O34-FiDg" name="org.datafoodconsortium.connector" URI="http://static.datafoodconsortium.org/uml/connector/connector.uml">
   <packageImport xmi:id="_OD9FEOjoEey9aasgGgoaNw">
     <importedPackage href="agent.uml#_QRgBkOBfEeyy8cy9J23hHA"/>
   </packageImport>
@@ -15,4 +15,10 @@
   <packageImport xmi:id="_vo13gK-aEe2YkpOdl5YMAw">
     <importedPackage href="skos.uml#_hRGbgE1mEe2Pq5gmFYw1MQ"/>
   </packageImport>
+  <profileApplication xmi:id="_jmPRMDhmEe6Bec_m8yNqyw">
+    <eAnnotations xmi:id="_jmP4QDhmEe6Bec_m8yNqyw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="connector.profile.uml#_q9P7ADhmEe6Bec_m8yNqyw"/>
+    </eAnnotations>
+    <appliedProfile href="connector.profile.uml#_xSn38NtjEeyHhf8rtkVHoQ"/>
+  </profileApplication>
 </uml:Model>
