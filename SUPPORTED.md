@@ -1,9 +1,10 @@
-# DFC ontology currently supported concepts
+# Supported features
 
+Here is a list of the DFC features that the model currently supports.
 
 - `Address`
   - [x] street
-  - [x] postcalcode
+  - [x] postalCode
   - [x] city
   - [x] country
   - [ ] addressOf
@@ -56,14 +57,14 @@
 - `Brand`
   - [ ] description
 - `Catalog`
-  - [ ] lists
-  - [ ] maintains
+  - [x] lists
+  - [x] maintains
 - `CatalogItem`
   - [x] references
   - [x] sku
   - [x] stockLimitation
   - [x] offeredThrough
-  - [ ] listedIn
+  - [x] listedIn
   - [ ] managedBy
 - `Coordination`
   - [ ] coordinates
@@ -106,9 +107,9 @@
   - [x] defines
   - [x] supplies
   - [x] manages
-  - [ ] proposes
+  - [x] proposes
   - [ ] transforms
-  - [ ] maintains
+  - [x] maintains
   - [ ] affiliates
   - [ ] coordinatedBy
 - `FunctionalProduct`
@@ -130,20 +131,20 @@
   - [ ] listedIn
   - [ ] offers
 - `Order`
-  - [ ] orderNumber
+  - [x] orderNumber
   - [ ] discount
-  - [ ] date
-  - [ ] belongsTo
-  - [ ] hasPart
+  - [x] date
+  - [x] belongsTo
+  - [x] hasPart
   - [ ] orderedBy
   - [ ] selects
   - [ ] uses
 - `OrderLine`
-  - [ ] quantity
+  - [x] quantity
   - [ ] discount
-  - [ ] hasPrice
-  - [ ] concerns
-  - [ ] partOf
+  - [x] hasPrice
+  - [x] concerns
+  - [x] partOf
 - `PaymentMethod`
   - [ ] price
   - [ ] usedBy
@@ -175,10 +176,10 @@
   - [ ] identifiedBy
   - [ ] constitutes
 - `SaleSession`
-  - [ ] beginDate
-  - [ ] endDate
-  - [ ] quantity
-  - [ ] lists
+  - [x] beginDate
+  - [x] endDate
+  - [x] quantity
+  - [x] lists
 - `ShippingOption`
   - [ ] quantity
   - [ ] optionOf

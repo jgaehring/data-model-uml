@@ -113,14 +113,14 @@
   <datafoodconsortium_connector:getter xmi:id="_Fc2X0E1uEe2Pq5gmFYw1MQ" base_Operation="_5wL8YE1tEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:getter xmi:id="_GWANYE1uEe2Pq5gmFYw1MQ" base_Operation="_59qXsE1tEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_bIhecE2MEe2Pq5gmFYw1MQ" base_Property="_zxyIoE2LEe2Pq5gmFYw1MQ" getter="_2DUGME1mEe2Pq5gmFYw1MQ" adder="_nuHFwE1nEe2Pq5gmFYw1MQ" remover="_KA-5EE1oEe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:semantic xmi:id="_bIiFgE2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#broader" base_Element="_zxyIoE2LEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_bIiFgE2MEe2Pq5gmFYw1MQ" map="skos:broader" base_Element="_zxyIoE2LEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_cvSA4E2MEe2Pq5gmFYw1MQ" base_Property="_Edc0sE2MEe2Pq5gmFYw1MQ" getter="_3reW0E1mEe2Pq5gmFYw1MQ" adder="_pJA9gE1nEe2Pq5gmFYw1MQ" remover="_LrViEE1oEe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:semantic xmi:id="_cvSA4U2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#inScheme" base_Element="_Edc0sE2MEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_cvSA4U2MEe2Pq5gmFYw1MQ" map="skos:inScheme" base_Element="_Edc0sE2MEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_e4ZCcE2MEe2Pq5gmFYw1MQ" base_Property="_FsbJQE2MEe2Pq5gmFYw1MQ" getter="_32kMgE1mEe2Pq5gmFYw1MQ" adder="_oqICEE1nEe2Pq5gmFYw1MQ" remover="_Ms2CYE1oEe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:semantic xmi:id="_e4ZpgE2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#narrower" base_Element="_FsbJQE2MEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_e4ZpgE2MEe2Pq5gmFYw1MQ" map="skos:narrower" base_Element="_FsbJQE2MEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:propertyMultiple xmi:id="_gNz9QE2MEe2Pq5gmFYw1MQ" base_Property="_GLqC8E2MEe2Pq5gmFYw1MQ" getter="_4FpxYE1mEe2Pq5gmFYw1MQ" adder="_pgfpYE1nEe2Pq5gmFYw1MQ" remover="_N6XlcE1oEe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:semantic xmi:id="_gNz9QU2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#prefLabel" base_Element="_GLqC8E2MEe2Pq5gmFYw1MQ"/>
-  <datafoodconsortium_connector:semantic xmi:id="_ySGpIE2MEe2Pq5gmFYw1MQ" map="http://www.w3.org/2004/02/skos/core#Concept" base_Element="_XhC24E2LEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_gNz9QU2MEe2Pq5gmFYw1MQ" map="skos:prefLabel" base_Element="_GLqC8E2MEe2Pq5gmFYw1MQ"/>
+  <datafoodconsortium_connector:semantic xmi:id="_ySGpIE2MEe2Pq5gmFYw1MQ" map="skos:Concept" base_Element="_XhC24E2LEe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:constructor xmi:id="_mzdpUE2REe2Pq5gmFYw1MQ" base_Operation="_kuPCME2REe2Pq5gmFYw1MQ"/>
   <datafoodconsortium_connector:initializerParent xmi:id="_m-rmoL02Ee27q7bl1fmSsA"/>
   <datafoodconsortium_connector:initializerParent xmi:id="_YyZ4sL03Ee27q7bl1fmSsA"/>

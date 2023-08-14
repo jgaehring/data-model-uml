@@ -29,16 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add class for taxons:
-	- `Unit` class.
-	- `ProductType` class.
-	- `GeographicalOrigin` class.
-	- `CharacteristicDimension` class.
-	- `Claim` class.
-	- `Certification` class.
-	- `NatureOrigin` class.
-	- `PartOrigin` class.
-	- `Quantity` class.
+- New stereotype `skosBroader` to add constraint on SKOS concepts.
 - Add `localizations` parameter in the constructor of:
     - `Agent`
     - `Enterprise`
@@ -47,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - add missing constructor parameters.
     - add `catalogs` property.
     - add `technicalProducts` property.
-- constructor parameters on `DefinedProduct`.
+- Constructor parameters on `DefinedProduct`.
 - `Offerable:setOfferedProduct`
 - `Offer`
     - add missing constructor parameters.

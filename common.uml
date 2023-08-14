@@ -384,6 +384,27 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VYXMsDinEe6Bec_m8yNqyw" name="Quantity">
+      <elementImport xmi:id="_VYXMsjinEe6Bec_m8yNqyw">
+        <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
+      </elementImport>
+      <elementImport xmi:id="_dG8B8DinEe6Bec_m8yNqyw" importedElement="_9mm50MrsEe24_rxb3O_v6Q"/>
+      <ownedAttribute xmi:id="_VYXMszinEe6Bec_m8yNqyw" name="unit">
+        <type xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VYXMtDinEe6Bec_m8yNqyw" name="value">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_gMcaUDinEe6Bec_m8yNqyw" client="_VYXMsDinEe6Bec_m8yNqyw" supplier="_S8hGMNxVEeyr_asPBQgiSQ _9mm50MrsEe24_rxb3O_v6Q" contract="_9mm50MrsEe24_rxb3O_v6Q"/>
+      <ownedOperation xmi:id="_VYXMtjinEe6Bec_m8yNqyw" name="Quantity">
+        <ownedParameter xmi:id="_VYXMtzinEe6Bec_m8yNqyw" name="unit">
+          <type xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_VYXMuDinEe6Bec_m8yNqyw" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <profileApplication xmi:id="_vcEZ8OjgEey9aasgGgoaNw">
       <eAnnotations xmi:id="_vcIEUOjgEey9aasgGgoaNw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="connector.profile.uml#_q9P7ADhmEe6Bec_m8yNqyw"/>
@@ -496,4 +517,14 @@
   <datafoodconsortium_connector:skosBroader xmi:id="_rCKe8DhgEe6Bec_m8yNqyw" map="dfc-m:NutrientDimension" base_Property="_F3fNdlOlEe25FchyjWczOg"/>
   <datafoodconsortium_connector:skosBroader xmi:id="_6aqdgDhhEe6Bec_m8yNqyw" map="dfc-m:Unit" base_Property="_yh-9wOmrEeyc2oibQ8qwAA"/>
   <datafoodconsortium_connector:skosBroader xmi:id="_zQ5wEDhiEe6Bec_m8yNqyw" map="dfc-m:PhysicalDimension" base_Property="_kP6H9lOmEe25FchyjWczOg"/>
+  <datafoodconsortium_connector:semantic xmi:id="_VYXMuTinEe6Bec_m8yNqyw" map="dfc-b:Quantity" base_Element="_VYXMsDinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:blankNode xmi:id="_VYXMujinEe6Bec_m8yNqyw" base_Class="_VYXMsDinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:property xmi:id="_VYXMuzinEe6Bec_m8yNqyw" base_Property="_VYXMszinEe6Bec_m8yNqyw" getter="_lpNj8NxXEeyr_asPBQgiSQ" setter="_V8bdIOmsEeyc2oibQ8qwAA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_VYXMvDinEe6Bec_m8yNqyw" map="dfc-b:hasUnit" base_Element="_VYXMszinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:skosBroader xmi:id="_VYXMvTinEe6Bec_m8yNqyw" map="dfc-m:Unit" base_Property="_VYXMszinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:property xmi:id="_VYXMvjinEe6Bec_m8yNqyw" base_Property="_VYXMtDinEe6Bec_m8yNqyw" getter="_mwYnYNxXEeyr_asPBQgiSQ" setter="_XVOcEOmsEeyc2oibQ8qwAA"/>
+  <datafoodconsortium_connector:semantic xmi:id="_VYXMvzinEe6Bec_m8yNqyw" map="dfc-b:value" base_Element="_VYXMtDinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:constructor xmi:id="_VYXMwDinEe6Bec_m8yNqyw" base_Operation="_VYXMtjinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:initializer xmi:id="_VYXMwTinEe6Bec_m8yNqyw" property="_VYXMszinEe6Bec_m8yNqyw" base_Parameter="_VYXMtzinEe6Bec_m8yNqyw"/>
+  <datafoodconsortium_connector:initializer xmi:id="_VYXMwjinEe6Bec_m8yNqyw" property="_VYXMtDinEe6Bec_m8yNqyw" base_Parameter="_VYXMuDinEe6Bec_m8yNqyw"/>
 </xmi:XMI>
