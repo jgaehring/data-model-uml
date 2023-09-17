@@ -288,7 +288,6 @@
       <elementImport xmi:id="_SjbKAFOkEe25FchyjWczOg">
         <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </elementImport>
-      <elementImport xmi:id="_UmktgFOkEe25FchyjWczOg"/>
       <generalization xmi:id="_aBXb4FOcEe25FchyjWczOg" general="_vc4_oOmsEeyc2oibQ8qwAA"/>
       <ownedAttribute xmi:id="_FvTRwOmtEeyc2oibQ8qwAA" name="allergenDimension">
         <type xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
@@ -352,8 +351,6 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_kP6H8FOmEe25FchyjWczOg" name="PhysicalCharacteristic">
       <elementImport xmi:id="_kP6H8VOmEe25FchyjWczOg" importedElement="_BCkF4FOlEe25FchyjWczOg"/>
       <elementImport xmi:id="_kP6H8lOmEe25FchyjWczOg" importedElement="_vc4_oOmsEeyc2oibQ8qwAA"/>
-      <elementImport xmi:id="_kP6H81OmEe25FchyjWczOg"/>
-      <elementImport xmi:id="_kP6H9FOmEe25FchyjWczOg"/>
       <elementImport xmi:id="_1-oLsLwNEe2Lyp3hOvoKhw">
         <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </elementImport>
