@@ -7,21 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-10-03
+
 ### Fixed
 
-- `Enterprise`
-    - add missing getter and setter on properties `description`, `catalogItems` and `suppliedProduct`
-- add multiple missing "adder" stereotype on `Manufacturable`.
-- add missing "adder" stereotype on `Offerable`.
-- profile XMI href.
-- add missing `IUnit` import in `IPrice` and in `Price`.
-- add missing things in `Offer`:
-    - import `IPrice`
-    - add missing setters in properties 
-- add missing `IPrice` in `Payable`.
+- `Enterprise`:
+    - Add missing getter and setter on properties `description`, `catalogItems` and `suppliedProduct`.
+- Add multiple missing "adder" stereotype on `Manufacturable`.
+- Add missing "adder" stereotype on `Offerable`.
+- Profile XMI href.
+- Add missing `IUnit` import in `IPrice` and in `Price`.
+- Add missing things in `Offer`:
+    - Import `IPrice`;
+    - Add missing setters in properties.
+- Add missing `IPrice` in `Payable`.
 - Add missing method in `Marketable`:
-    - `setOfferedItem`
-    - `setCustomerCategory`
+    - `setOfferedItem`;
+    - `setCustomerCategory`.
 - Set missing getter and setter for the `description` property of `CustomerCategory`.
 - Restore adders.
 - `Offer`:
@@ -31,109 +33,116 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - New stereotype `skosBroader` to add constraint on SKOS concepts.
 - Add `localizations` parameter in the constructor of:
-    - `Agent`
-    - `Enterprise`
-    - `Person`
-- `Enterprise`
-    - add missing constructor parameters.
-    - add `catalogs` property.
-    - add `technicalProducts` property.
+    - `Agent`;
+    - `Enterprise`;
+    - `Person`.
+- `Enterprise`:
+    - Add missing constructor parameters;
+    - Add `catalogs` property;
+    - Add `technicalProducts` property.
 - Constructor parameters on `DefinedProduct`.
-- `Offerable:setOfferedProduct`
-- `Offer`
-    - add missing constructor parameters.
+- `Offerable:setOfferedProduct`.
+- `Offer`:
+    - Add missing constructor parameters.
 - `ICatalogItem`:
-    - add `setSku`
-    - add `Catalogable` generalization
-- `CatalogItem`
-    - set `stockLimitation` setter.
-    - add missing constructor parameters.
-- Stockable:setStockLimitation.
+    - Add `setSku`;
+    - Add `Catalogable` generalization.
+- `CatalogItem`:
+    - Set `stockLimitation` setter;
+    - Add missing constructor parameters.
+- `Stockable:setStockLimitation`.
 - `SuppliedProduct`:
-    - totalTheoreticalStock (property)
-    - getTotalTheoreticalStock()
-    - setTotalTheoreticalStock()
-    - add constructor parameters
+    - Add `totalTheoreticalStock` (property);
+    - Add `getTotalTheoreticalStock`;
+    - Add `setTotalTheoreticalStock`;
+    - Add constructor parameters.
 - Import `IUnit` in:
-    - `AllergenCharacteristic`
-    - `NutrientCharacteristic`
-    - `PhysicalCharacteristic`
+    - `AllergenCharacteristic`;
+    - `NutrientCharacteristic`;
+    - `PhysicalCharacteristic`.
 - `Characteristic`:
-    - add the `blankNode` stereotype
+    - Add the `blankNode` stereotype.
 - `IPrice`:
-    - add `setValue`, `setVatRate` and `setUnit`
-    - add the `BlankNode` stereotype
+    - Add `setValue`, `setVatRate` and `setUnit`;
+    - Add the `BlankNode` stereotype.
 - `Price`:
-    - add constructor parameters
-    - add setter in properties
+    - Add constructor parameters;
+    - Add setter in properties.
 - `Catalogable`:
-    - add `registerInCatalog`
-    - add `removeFromCatalog`
+    - Add `registerInCatalog`;
+    - Add `removeFromCatalog`.
 - `Browsable`:
-    - add `removeItem`
-- `IAllergenCharacteristic`
-    - add the `BlankNode` stereotype
-- `AllergenDimension` class
-- `INutrientCharacteristic`
-    - add the `BlankNode` stereotype
-- `NutrientDimension` class
-- `IPhysicalCharacteristic`
-    - add the `BlankNode` stereotype
-- `PhysicalDimension` class    
-- `ICatalog`
-- `ISaleSession`
-    - add `getQuantity`
-    - add `setQuantity`
-    - add `getOffers`
-    - add `addOffer`
-- `SaleSession`
-- `Ellapsable`
-    - add setters
-    - add stereotypes
-- `IOrder`
-- `IOrderLine`
-- `Order`
-    - add properties
-- `OrderLine`
-    - add properties
-- `Payable`
-    - add `setPrice`
+    - Add `removeItem`.
+- `IAllergenCharacteristic`:
+    - Add the `BlankNode` stereotype.
+- `AllergenDimension` class.
+- `INutrientCharacteristic`:
+    - Add the `BlankNode` stereotype.
+- `NutrientDimension` class.
+- `IPhysicalCharacteristic`:
+    - Add the `BlankNode` stereotype.
+- `PhysicalDimension` class.
+- `ICatalog`.
+- `ISaleSession`:
+    - Add `getQuantity`;
+    - Add `setQuantity`;
+    - Add `getOffers`;
+    - Add `addOffer`.
+- `SaleSession`.
+- `Ellapsable`:
+    - Add setters;
+    - Add stereotypes.
+- `IOrder`.
+- `IOrderLine`.
+- `Order`:
+    - Add properties.
+- `OrderLine`:
+    - Add properties.
+- `Payable`:
+    - Add `setPrice`.
 - connector.profile.uml:
-    - the `blankNode` stereotype can be applied on Interface;
-- `ISuppliedProduct`
-- `ITechnicalProduct`
-- `TechnicalProduct`
-- `IAgent`
+    - The `blankNode` stereotype can be applied on Interface.
+- `ISuppliedProduct`.
+- `ITechnicalProduct`.
+- `TechnicalProduct`.
+- `IAgent`.
 
 ### Changed
 
 - Replace the URL in the map property attribute by a prefix + a name.
 - Remove `JsonLdSerializer`.
 - `Enterprise`:
-    - remove `Nameable`
+    - Removed `Nameable` interface.
 - Move `getSku` into `ICatalogItem`.
 - Change `getQuantityUnit` and `setQuantityUnit` parameter to `IUnit`.
 - Rename `quantityUnit` and `quantityValue` to `unit` and `value` of:
-    - `QuantitativeValue`
-    - `Characteristic`
-    - `AllergenCharacteristic`
-    - `NutrientCharacteristic`
-    - `PhysicalCharacteristic`
+    - `QuantitativeValue`;
+    - `Characteristic`;
+    - `AllergenCharacteristic`;
+    - `NutrientCharacteristic`;
+    - `PhysicalCharacteristic`.
 - Change constructor `unit` paramater type to `IUnit` of:
-    - `QuantitativeValue`
-    - `Characteristic`
-    - `AllergenCharacteristic`
-    - `NutrientCharacteristic`
-    - `PhysicalCharacteristic`
+    - `QuantitativeValue`;
+    - `Characteristic`;
+    - `AllergenCharacteristic`;
+    - `NutrientCharacteristic`;
+    - `PhysicalCharacteristic`.
 - Renamed `Repository` to `Catalog`.
-- `Catalogable`
-    - rename `getRepository` to `getCatalog`
+- `Catalogable`:
+    - Renamed `getRepository` to `getCatalog`.
 - `Browsable`:
-    - change `getMaintainers` return type to `IEnterprise`
-    - renamed `getListedItems` to `getItems`
-- Delete classes: `ProductType`, `Unit`, `GeographicalOrigin`, `Certification`, `NatureOrigin`, `PartOrigin`, `CharacteristicDimension`, `AllergenDimension`.
-- `SKOSConcept`:
-    - not a BlankNode anymore.
+    - Changed `getMaintainers` return type to `IEnterprise`.
+    - Renamed `getListedItems` to `getItems`
+- Deleted classes: 
+    - `ProductType`;
+    - `Unit`;
+    - `GeographicalOrigin`;
+    - `Certification`;
+    - `NatureOrigin`;
+    - `PartOrigin`;
+    - `CharacteristicDimension`;
+    - `AllergenDimension`.
+- `SKOSConcept` is not a BlankNode anymore.
 
 ## [1.0.0] - 2023-02-06
 
@@ -147,5 +156,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sale.uml
 - skos.uml
 
-[unreleased]: https://github.com/datafoodconsortium/data-model-uml/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/datafoodconsortium/data-model-uml/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/datafoodconsortium/data-model-uml/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/datafoodconsortium/data-model-uml/releases/tag/v1.0.0

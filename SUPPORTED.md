@@ -58,7 +58,7 @@ Here is a list of the DFC features that the model currently supports.
   - [ ] description
 - `Catalog`
   - [x] lists
-  - [x] maintains
+  - [x] maintainedBy
 - `CatalogItem`
   - [x] references
   - [x] sku
@@ -74,25 +74,25 @@ Here is a list of the DFC features that the model currently supports.
   - [x] description
   - [ ] definedBy
 - `DefinedProduct`
+  - [x] name
   - [x] description
   - [x] hasType
   - [x] hasQuantity
-  - [x] alcohol percentage
+  - [x] alcoholPercentage
   - [x] lifetime
   - [x] hasClaim
-  - [x] usage or storage conditions
+  - [x] usageOrStorageConditions
   - [x] hasAllergenCharacteristic
   - [x] hasNutrientCharacteristic
   - [x] hasPhysicalCharacteristic
   - [x] hasGeographicalOrigin
-  - [x] catalog items
-  - [x] certifications
+  - [x] hasCertifications
   - [x] hasNatureOrigin
   - [x] hasPartOrigin
   - [ ] hasBrand
   - [ ] hasProcess
   - [ ] image
-  - [ ] referencedBy
+  - [x] referencedBy
   - [ ] consumedBy
   - [ ] referenceOf
 - `DeliveryOption`
@@ -103,6 +103,7 @@ Here is a list of the DFC features that the model currently supports.
   - [ ] fee
   - [ ] selectedBy
 - `Enterprise`
+  - [x] description
   - [x] VATnumber
   - [x] defines
   - [x] supplies
@@ -129,17 +130,18 @@ Here is a list of the DFC features that the model currently supports.
   - [x] stockLimitation
   - [x] hasPrice (offeredFor)
   - [ ] listedIn
-  - [ ] offers
+  - [x] offers
 - `Order`
   - [x] orderNumber
   - [ ] discount
   - [x] date
   - [x] belongsTo
   - [x] hasPart
-  - [ ] orderedBy
+  - [x] orderedBy
   - [ ] selects
   - [ ] uses
 - `OrderLine`
+  - [x] description
   - [x] quantity
   - [ ] discount
   - [x] hasPrice
@@ -151,7 +153,7 @@ Here is a list of the DFC features that the model currently supports.
 - `Person`
   - [x] familyName
   - [x] firstName
-  - [x] affiliatedBy
+  - [x] affiliates
 - `Place`
   - [ ] hosts
 - `PhysicalPlace`
