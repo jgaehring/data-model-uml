@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Interfaces:
+    - New `IPhoneNumber` interface.
+    - New `ISocialMedia` interface.
+    - New `ContactableByAddress` interface.
+    - New `ContactableByEmail` interface.
+    - New `ContactableByPhone` interface.
+    - New `ContactableByWebsite` interface.
+    - New `ContactableBySocialMedia` interface.
+    - New `PhoneNumberOwner` interface.
+    - New `AddressOwner` interface.
+    - New `EmailOwner` interface.
+    - New `WebsiteOwner` interface.
+    - New `SocialMediaOwner` interface.
+    - New `ManagedByMainContact` interface.
+    - New `MainContactOwner` interface.
+
+- Classes:
+    - New `PhoneNumber` class.
+    - New `SocialMedia` class.
+
+- In the `SUPPORTED.md` file:
+    - Add the `PhoneNumber` class;
+    - Add `PhysicalPlace:hasPhoneNumber`.
+
+### Changed
+
+- Change the type of `Dialable:number` from Integer to String.
+- Change the type of `Contactable:getPhoneNumbers` from `Dialable` to `IPhoneNumber`.
+- Change the type of `Contactable:addPhoneNumber` from `Dialable` to `IPhoneNumber`.
+
+### Removed
+
+- The `Contactable` interface.
+- The `Emailable` interface.
+- The `Identifiable` interface.
+
 ## [2.0.0] - 2023-10-03
 
 ### Fixed

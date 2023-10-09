@@ -10,11 +10,13 @@ Here is a list of the DFC features that the model currently supports.
   - [ ] addressOf
 - `Agent`
   - [x] hasAddress
-  - [ ] hasPhoneNumber
-  - [ ] hasSocialMedia
+  - [x] hasPhoneNumber
+  - [x] hasSocialMedia
   - [ ] orders
   - [ ] requests
   - [ ] owns
+  - [x] email
+  - [x] websitePage
 - `AsPlannedConsumptionFlow`
   - [ ] quantity
   - [ ] consumes
@@ -106,6 +108,7 @@ Here is a list of the DFC features that the model currently supports.
   - [x] description
   - [x] VATnumber
   - [x] defines
+  - [x] hasMainContact
   - [x] supplies
   - [x] manages
   - [x] proposes
@@ -156,8 +159,13 @@ Here is a list of the DFC features that the model currently supports.
   - [x] affiliates
 - `Place`
   - [ ] hosts
+- `PhoneNumber`
+  - [x] countryCode
+  - [x] phoneNumber
 - `PhysicalPlace`
   - [ ] hasAddress
+  - [ ] hasPhoneNumber
+  - [ ] hasMainContact
 - `PhysicalProduct`
   - [ ] represents
   - [ ] constitutedBy
@@ -189,6 +197,9 @@ Here is a list of the DFC features that the model currently supports.
   - [ ] fee
   - [ ] startDate
   - [ ] endDate
+- `SocialMedia`
+  - [x] name
+  - [x] URL
 - `SuppliedProduct`
   - [x] totalTheoreticalStock
   - [ ] referenceOf
@@ -208,3 +219,4 @@ Here is a list of the DFC features that the model currently supports.
   - [ ] concerns
 - `VirtualPlace`
   - [ ] hasUrl
+  - [ ] websitePage
