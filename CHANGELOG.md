@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2023-11-06
+
 ### Added
 
 - Interfaces:
@@ -28,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Classes:
     - New `PhoneNumber` class.
     - New `SocialMedia` class.
+    - Support the name of `Enterprise`.
 
 - In the `SUPPORTED.md` file:
     - Add the `PhoneNumber` class;
@@ -195,5 +198,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - skos.uml
 
 [unreleased]: https://github.com/datafoodconsortium/data-model-uml/compare/v2.0.0...HEAD
+[2.1.0]: https://github.com/datafoodconsortium/data-model-uml/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/datafoodconsortium/data-model-uml/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/datafoodconsortium/data-model-uml/releases/tag/v1.0.0
