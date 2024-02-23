@@ -154,8 +154,8 @@
       <elementImport xmi:id="_SbxTAEvGEe2LdZJdl4TCHA">
         <importedElement xmi:type="uml:Interface" href="common.uml#_9mm50MrsEe24_rxb3O_v6Q"/>
       </elementImport>
-      <elementImport xmi:id="_SQ0AwOqNEeyCo6a7S9M9vA">
-        <importedElement xmi:type="uml:Class" href="skos.uml#_XhC24E2LEe2Pq5gmFYw1MQ"/>
+      <elementImport xmi:id="_6HIqYE76Ee2TpoYuSsmzTA">
+        <importedElement xmi:type="uml:Interface" href="skos.uml#_r06YgE1mEe2Pq5gmFYw1MQ"/>
       </elementImport>
       <elementImport xmi:id="_NDoMwE7_Ee2TpoYuSsmzTA" importedElement="_6u8dANxWEeyr_asPBQgiSQ"/>
       <generalization xmi:id="_irv_IAaaEe26esJmMoAMaw" general="_pR_I0NxUEeyr_asPBQgiSQ"/>
